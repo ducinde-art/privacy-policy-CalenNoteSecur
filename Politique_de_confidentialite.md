@@ -1,3 +1,8 @@
+Politique de confidentialité - CalenNoteSecure
+Dernière mise à jour : 23 novembre 2025
+Développeur : Duc.inde
+Contact : duc.inde@gmail.com
+
 1. Engagement envers votre vie privée
   
   Votre vie privée est une priorité !
