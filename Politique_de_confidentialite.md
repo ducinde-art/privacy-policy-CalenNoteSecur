@@ -1,6 +1,9 @@
 Politique de confidentialité - CalenNoteSecure
+
 Dernière mise à jour : 23 novembre 2025
+
 Développeur : Duc.inde
+
 Contact : duc.inde@gmail.com
 
 1. Engagement envers votre vie privée
@@ -24,22 +27,26 @@ Contact : duc.inde@gmail.com
   CalenNoteSecure enregistre uniquement les données nécessaires au fonctionnement local de l’application.
 
   2.1 Calendrier :
+  
     Événements : titre, description, date, heure, catégorie, répétition, rappels
     Anniversaires : nom, date de naissance, âge, notes, couleur
     Catégories : nom, couleur, icône
     Pièces jointes : photos, documents, liens (copie locale uniquement)
   
   2.2 TodoList : 
+  
     Tâches : texte, statut, date de création
     Listes : nom, couleur, icône
     Organisation des catégories de tâches
   
   2.3 Sécurité :
+  
     Mot de passe (chiffré AES-256)
     Code PIN (chiffré AES-256)
     Authentification biométrique (gérée par Android/iOS(Biométrie que vous créer via votre téléphone))
   
   2.4 Paramètres :
+  
     Thème (clair/sombre/système)
     Langue (français/anglais)
     Langue
@@ -47,6 +54,7 @@ Contact : duc.inde@gmail.com
     Paramètres de notifications
   
   2.5 Corbeille :
+  
     Éléments supprimés temporairement
     Suppression définitive uniquement manuelle
 
@@ -93,7 +101,9 @@ Contact : duc.inde@gmail.com
   Export / import de sauvegardes chiffrées
 
 5. Sécurité et chiffrement
+   
   5.1 Chiffrement AES-256
+  
     Les données suivantes sont chiffrées :
     Événements
     Anniversaires
@@ -104,12 +114,14 @@ Contact : duc.inde@gmail.com
     Corbeille
 
   5.2 Authentification
+  
     Biométrie
     PIN
     Mot de passe
     Tous les modes sont optionnels et indépendants.
 
   5.3 Clé de chiffrement
+  
     Générée localement
     Stockée de manière sécurisée
     Ne quitte jamais votre appareil
@@ -117,6 +129,7 @@ Contact : duc.inde@gmail.com
 6. Pièces jointes et fichiers
    
   6.1 Gestion des fichiers
+  
     Lorsque vous ajoutez des pièces jointes :
    
     Photos (appareil photo)
@@ -136,6 +149,7 @@ Contact : duc.inde@gmail.com
     Aucun téléchargement automatique.
 
   6.2 Sécurité des fichiers
+  
     Métadonnées
     Noms, types, chemins → chiffrés AES-256 dans la base de données.
     
@@ -155,10 +169,12 @@ Contact : duc.inde@gmail.com
       ⚠️ Sur un appareil rooté ou compromis, ils pourraient être lisibles.
 
   6.3 Suppression
+  
     Supprimer une pièce jointe supprime uniquement la copie locale.
     Vos fichiers originaux dans la galerie/dossiers restent intacts.
 
   6.4 Recommandations
+  
     Pour une sécurité optimale :
     Activez le verrouillage de votre appareil (PIN, empreinte, visage)
     Ne partagez pas votre appareil
