@@ -1,280 +1,622 @@
-Privacy Policy - CalenNoteSecure
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - CalenNoteSecure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2c3e50;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .meta {
+            color: #7f8c8d;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h3 {
+            color: #34495e;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        p, li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        
+        ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        
+        .danger {
+            background-color: #f8d7da;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #dc3545;
+            margin: 15px 0;
+        }
+        
+        .info-box {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .subsection {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <h2 style="border: none; margin-top: 10px; font-size: 28px; color: #3498db;">CalenNoteSecure</h2>
+            <div class="meta">
+                <p><strong>Last updated:</strong> November 23, 2025</p>
+                <p><strong>Developer:</strong> Duc.inde</p>
+                <p><strong>Contact:</strong> <a href="mailto:duc.inde@gmail.com">duc.inde@gmail.com</a></p>
+            </div>
+        </header>
 
-Last updated: November 23, 2025
+        <section class="section">
+            <h2>1. Commitment to your privacy</h2>
+            <div class="highlight">
+                <p><strong>Your privacy is a priority!</strong></p>
+                <p>Your data belongs to you and stays on your device.</p>
+                <p>CalenNoteSecure collects <strong>NO</strong> external data and works entirely offline.</p>
+            </div>
+            
+            <div class="feature-list">
+                <div class="feature-item">✓ No server</div>
+                <div class="feature-item">✓ No cloud</div>
+                <div class="feature-item">✓ No tracking</div>
+                <div class="feature-item">✓ No advertising</div>
+                <div class="feature-item">✓ No data transfer</div>
+                <div class="feature-item">✓ No data sale</div>
+                <div class="feature-item">✓ No data sharing</div>
+                <div class="feature-item">✓ 100% local and encrypted storage</div>
+            </div>
+            
+            <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
+                You keep full control at all times.
+            </p>
+        </section>
 
-Developer: Duc.inde
+        <section class="section">
+            <h2>2. Locally stored data (never transmitted)</h2>
+            <p>CalenNoteSecure stores only the data necessary for the local functioning of the app.</p>
 
-Contact: duc.inde@gmail.com
+            <div class="subsection">
+                <h3>2.1 Calendar</h3>
+                <ul>
+                    <li>Events: title, description, date, time, category, repetition, reminders</li>
+                    <li>Birthdays: name, date of birth, age, notes, color</li>
+                    <li>Categories: name, color, icon</li>
+                    <li>Attachments: photos, documents, links (local copy only)</li>
+                </ul>
+            </div>
 
-1. Commitment to your privacy
+            <div class="subsection">
+                <h3>2.2 TodoList</h3>
+                <ul>
+                    <li>Tasks: text, status, creation date</li>
+                    <li>Lists: name, color, icon</li>
+                    <li>Organization of task categories</li>
+                </ul>
+            </div>
 
-	Your privacy is a priority!
-	Your data belongs to you and stays on your device.
-	CalenNoteSecure collects NO external data and works entirely offline.
-	
-	No server
-	No cloud
-	No tracking
-	No advertising
-	No transfer, sale, or sharing of data
-	No collection of personal information
-	100% local and encrypted storage
-	
-	You keep full control at all times.
-	
-2. Locally stored data (never transmitted)
-	
-	CalenNoteSecure stores only the data necessary for the local functioning of the app.
+            <div class="subsection">
+                <h3>2.3 Security</h3>
+                <ul>
+                    <li>Password (AES-256 encrypted)</li>
+                    <li>PIN code (AES-256 encrypted)</li>
+                    <li>Biometric authentication (handled by Android/iOS - biometrics created on your device)</li>
+                </ul>
+            </div>
 
-	2.1 Calendar:
-	
-		Events: title, description, date, time, category, repetition, reminders  
-		Birthdays: name, date of birth, age, notes, color  
-		Categories: name, color, icon  
-		Attachments: photos, documents, links (local copy only)
+            <div class="subsection">
+                <h3>2.4 Settings</h3>
+                <ul>
+                    <li>Theme (light/dark/system)</li>
+                    <li>Language (French/English)</li>
+                    <li>Display preferences</li>
+                    <li>Notification settings</li>
+                </ul>
+            </div>
 
-	2.2 TodoList:
-	
-		Tasks: text, status, creation date  
-		Lists: name, color, icon  
-		Organization of task categories
+            <div class="subsection">
+                <h3>2.5 Trash</h3>
+                <ul>
+                    <li>Temporarily deleted items</li>
+                    <li>Permanent deletion only manually</li>
+                </ul>
+            </div>
+        </section>
 
-	2.3 Security:
+        <section class="section">
+            <h2>3. Data we NEVER collect</h2>
+            <div class="danger">
+                <p><strong>No personal data is collected, sent, or stored, including:</strong></p>
+            </div>
+            <ul>
+                <li>Full name</li>
+                <li>Email address, phone number</li>
+                <li>Contacts</li>
+                <li>GPS location</li>
+                <li>IP address, network data</li>
+                <li>Browsing history, cookies</li>
+                <li>Banking information</li>
+                <li>Advertising identifiers</li>
+                <li>Device identifiers</li>
+                <li>Photos/documents outside those you choose to add</li>
+            </ul>
+            <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #e74c3c;">
+                No data ever leaves your device.
+            </p>
+        </section>
 
-		Password (AES-256 encrypted)  
-		PIN code (AES-256 encrypted)  
-		Biometric authentication (handled by Android/iOS — biometrics created on your device)
+        <section class="section">
+            <h2>4. Local use of data</h2>
+            <p>Data is used only for:</p>
 
-	2.4 Settings:
-		
-		Theme (light/dark/system)  
-		Language (French/English)  
-		Display preferences  
-		Notification settings
+            <div class="subsection">
+                <h4>Calendar</h4>
+                <ul>
+                    <li>Displaying/organizing your events</li>
+                    <li>Managing birthdays</li>
+                    <li>Managing categories</li>
+                    <li>Storing local attachments</li>
+                </ul>
+            </div>
 
-	2.5 Trash:
+            <div class="subsection">
+                <h4>TodoList</h4>
+                <ul>
+                    <li>Organizing your tasks</li>
+                    <li>Managing custom lists</li>
+                    <li>(Optional) Syncing tasks with the calendar</li>
+                </ul>
+            </div>
 
-		Temporarily deleted items  
-		Permanent deletion only manually
+            <div class="subsection">
+                <h4>Notifications</h4>
+                <ul>
+                    <li>Sending local reminders</li>
+                    <li>No internet connection required</li>
+                </ul>
+            </div>
 
-3. Data we NEVER collect
+            <div class="subsection">
+                <h4>Security</h4>
+                <ul>
+                    <li>Protecting your data (AES-256)</li>
+                    <li>Biometric / PIN / password authentication</li>
+                    <li>Secure storage of the unique key</li>
+                </ul>
+            </div>
 
-	No personal data is collected, sent, or stored, including:
-	Full name
-	Email address, phone number
-	Contacts
-	GPS location
-	IP address, network data
-	Browsing history, cookies
-	Banking information
-	Advertising identifiers
-	Device identifiers
-	Photos/documents outside those you choose to add
-	
-	No data ever leaves your device.
-	
-4. Local use of data
-	
-	Data is used only for:
-	Calendar
-	Displaying/organizing your events
-	Managing birthdays
-	Managing categories
-	Storing local attachments
-	
-	TodoList
-	Organizing your tasks
-	Managing custom lists
-	(Optional) Syncing tasks with the calendar
-	
-	Notifications
-	Sending local reminders
-	No internet connection required
-	
-	Security
-	Protecting your data (AES-256)
-	Biometric / PIN / password authentication
-	Secure storage of the unique key
-	
-	Personalization
-	Theme
-	Language
-	Display sections
-	
-	Backup
-	Export/import encrypted backups
-	
-5.Security and encryption
+            <div class="subsection">
+                <h4>Personalization</h4>
+                <ul>
+                    <li>Theme</li>
+                    <li>Language</li>
+                    <li>Display sections</li>
+                </ul>
+            </div>
 
-	5.1 AES-256 encryption
+            <div class="subsection">
+                <h4>Backup</h4>
+                <ul>
+                    <li>Export / import encrypted backups</li>
+                </ul>
+            </div>
+        </section>
 
-		The following data is encrypted:  
-		Events  
-		Birthdays  
-		Tasks  
-		Categories  
-		File metadata  
-		Password & PIN  
-		Trash
+        <section class="section">
+            <h2>5. Security and encryption</h2>
 
-	5.2 Authentication
+            <div class="subsection">
+                <h3>5.1 AES-256 encryption</h3>
+                <div class="info-box">
+                    <p><strong>The following data is encrypted with AES-256:</strong></p>
+                </div>
+                <ul>
+                    <li>Events</li>
+                    <li>Birthdays</li>
+                    <li>Tasks</li>
+                    <li>Categories</li>
+                    <li>File metadata</li>
+                    <li>Password & PIN</li>
+                    <li>Trash</li>
+                </ul>
+            </div>
 
-		Biometrics  
-		PIN  
-		Password  
-		All modes are optional and independent.
+            <div class="subsection">
+                <h3>5.2 Authentication</h3>
+                <ul>
+                    <li>Biometrics (fingerprint, facial recognition)</li>
+                    <li>PIN code (4 to 6 digits)</li>
+                    <li>Customizable password</li>
+                </ul>
+                <p><em>All modes are optional and independent.</em></p>
+            </div>
 
-	5.3 Encryption key
-		
-		Generated locally  
-		Stored securely  
-		Never leaves your device
+            <div class="subsection">
+                <h3>5.3 Encryption key</h3>
+                <ul>
+                    <li>Generated automatically and locally</li>
+                    <li>Stored securely on your device</li>
+                    <li>Never leaves your device</li>
+                </ul>
+            </div>
+        </section>
 
-6. Attachments and files
-	
-	6.1 File management
+        <section class="section">
+            <h2>6. Attachments and files</h2>
 
-		When you add attachments:
-		
-		Photos (camera)  
-		A copy is saved in the app’s private directory.  
-		The original remains in your gallery.
-		
-		Photos (gallery)  
-		A local copy is saved.  
-		The original photo is never modified.
-		
-		Documents  
-		A copy is saved in the app’s private directory.  
-		Original files remain intact in your folders.
-		
-		Links  
-		Stored as text.  
-		No automatic downloads.
+            <div class="subsection">
+                <h3>6.1 File management</h3>
+                <p>When you add attachments:</p>
 
-	6.2 File security
+                <h4>Photos (camera)</h4>
+                <ul>
+                    <li>A copy is saved in the app's private directory</li>
+                    <li>The original remains in your gallery</li>
+                </ul>
 
-		Metadata  
-		Names, types, paths → AES-256 encrypted in the database.
-		
-		Files  
-		Stored in the app’s private directory  
-		Protected by Android/iOS sandbox  
-		Inaccessible to other apps  
-		
-		Transparency
-		
-		  ⚠️ The files themselves (photos, documents) are not encrypted.
-		
-		They remain protected by:  
-		OS sandbox isolation  
-		Restricted access to internal storage  
-		Device lock
-		
-		  ⚠️ On a rooted or compromised device, they may be readable.
+                <h4>Photos (gallery)</h4>
+                <ul>
+                    <li>A local copy is saved</li>
+                    <li>The original photo is never modified</li>
+                </ul>
 
+                <h4>Documents</h4>
+                <ul>
+                    <li>A copy is saved in the app's private directory</li>
+                    <li>Original files remain intact in your folders</li>
+                </ul>
 
-	6.3 Deletion
+                <h4>Links</h4>
+                <ul>
+                    <li>Stored as text</li>
+                    <li>No automatic downloads</li>
+                </ul>
+            </div>
 
-		Deleting an attachment removes only the local copy.  
-		Your original files in the gallery/folders remain intact.
+            <div class="subsection">
+                <h3>6.2 File security</h3>
 
+                <h4>Metadata</h4>
+                <p>Names, types, paths → <strong>AES-256 encrypted</strong> in the database.</p>
 
-	6.4 Recommendations
+                <h4>Files</h4>
+                <ul>
+                    <li>Stored in the app's private directory</li>
+                    <li>Protected by Android/iOS sandbox</li>
+                    <li>Inaccessible to other apps</li>
+                </ul>
 
-		For optimal security:  
-		Enable device locking (PIN, fingerprint, face)  
-		Do not share your device  
-		Use encrypted backups  
-		Avoid rooted/jailbroken devices
+                <h4>Transparency</h4>
+                <div class="warning">
+                    <p><strong>⚠️ The files themselves (photos, documents) are not encrypted.</strong></p>
+                    <p>They remain protected by:</p>
+                    <ul>
+                        <li>OS sandbox isolation</li>
+                        <li>Restricted access to internal storage</li>
+                        <li>Device lock</li>
+                    </ul>
+                </div>
+                <div class="danger">
+                    <p><strong>⚠️ On a rooted or compromised device, they may be readable.</strong></p>
+                </div>
+            </div>
 
+            <div class="subsection">
+                <h3>6.3 Deletion</h3>
+                <p>Deleting an attachment removes only the local copy.</p>
+                <p>Your original files in the gallery/folders remain intact.</p>
+            </div>
 
-7. Notifications and reminders
+            <div class="subsection">
+                <h3>6.4 Recommendations</h3>
+                <div class="info-box">
+                    <p><strong>For optimal security:</strong></p>
+                    <ul>
+                        <li>Enable device locking (PIN, fingerprint, face)</li>
+                        <li>Do not share your device with untrusted persons</li>
+                        <li>Use encrypted backups regularly</li>
+                        <li>Avoid rooted/jailbroken devices</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-	Local notifications only
-	Permissions requested for reminders
-	No data sent
-	No server required
+        <section class="section">
+            <h2>7. Notifications and reminders</h2>
+            <ul>
+                <li>Local notifications only (generated on your device)</li>
+                <li>Permissions requested for reminders</li>
+                <li>No data sent externally</li>
+                <li>No server required</li>
+            </ul>
+        </section>
 
-8. Children’s data
+        <section class="section">
+            <h2>8. Children's data</h2>
+            <div class="highlight">
+                <p>CalenNoteSecure collects no personally identifiable data.</p>
+                <p>No ads, no in-app purchases.</p>
+                <p>App suitable for all ages.</p>
+            </div>
+        </section>
 
-	CalenNoteSecure collects no personally identifiable data.
-	No ads, no in-app purchases.
-	App suitable for all ages.
+        <section class="section">
+            <h2>9. Your rights</h2>
+            <p>You can at any time:</p>
+            <ul>
+                <li>View all your data in the app</li>
+                <li>Export your data (encrypted backup)</li>
+                <li>Delete your data (partially or completely)</li>
+                <li>Empty the trash</li>
+                <li>Completely reset the app</li>
+                <li>Change your password / PIN / biometric settings</li>
+                <li>Contact us for any questions</li>
+            </ul>
+            <p><strong>Important:</strong> Uninstalling the app automatically deletes all local data.</p>
+        </section>
 
-9. Your rights
+        <section class="section">
+            <h2>10. Android / iOS permissions</h2>
 
-	You can:
-	View your data
-	Export your data
-	Delete your data
-	Empty the trash
-	Reset the app
-	Change password / PIN / biometrics
-	Contact us
-	Uninstalling the app automatically deletes all local data.
+            <div class="subsection">
+                <h3>Required permissions</h3>
+                <ul>
+                    <li><strong>Storage</strong>: To save your data locally</li>
+                    <li><strong>Notifications</strong>: To send event reminders</li>
+                </ul>
+            </div>
 
-10. Android / iOS permissions
+            <div class="subsection">
+                <h3>Optional permissions</h3>
+                <ul>
+                    <li><strong>Camera</strong>: If you wish to take a photo for an event</li>
+                    <li><strong>Gallery</strong>: If you wish to add an existing photo</li>
+                    <li><strong>Documents</strong>: If you wish to attach a document</li>
+                    <li><strong>Biometrics</strong>: If you enable biometric authentication</li>
+                </ul>
+            </div>
 
-	Required
-	Storage (local)
-	Notifications
+            <p><em>Permissions are requested only when a feature needs them.</em></p>
+        </section>
 
-	Optional
-	Camera
-	Gallery
-	Documents
-	Biometrics
+        <section class="section">
+            <h2>11. Technologies used</h2>
+            <div class="feature-list">
+                <div class="feature-item">Flutter</div>
+                <div class="feature-item">Dart</div>
+                <div class="feature-item">Flutter Secure Storage</div>
+                <div class="feature-item">Encrypt (AES-256)</div>
+                <div class="feature-item">Local Auth</div>
+                <div class="feature-item">Flutter Local Notifications</div>
+            </div>
+            <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
+                No external service, no tracker, no cloud.
+            </p>
+        </section>
 
-	Permissions are requested only when a feature needs them.
+        <section class="section">
+            <h2>12. Monetization</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>One-time purchase:</strong> €3.50</li>
+                    <li>✓ No ads</li>
+                    <li>✓ No subscription</li>
+                    <li>✓ No additional in-app purchases</li>
+                    <li>✓ No monetization of your data</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>All features included from purchase.</strong></p>
+            </div>
+        </section>
 
-11. Technologies used
-	
-	Flutter
-	Dart
-	Flutter Secure Storage
-	Encrypt (AES-256)
-	Local Auth
-	Flutter Local Notifications
-	No external service, no tracker, no cloud.
+        <section class="section">
+            <h2>13. Changes</h2>
+            <p>This policy may be updated if the app evolves.</p>
+            <p>In case of significant changes, we will inform you via an update.</p>
+            <ul>
+                <li><strong>Current version:</strong> 1.0.0</li>
+                <li><strong>Last modification:</strong> November 23, 2025</li>
+            </ul>
+        </section>
 
-12. Monetization
+        <section class="section">
+            <h2>14. GDPR compliance</h2>
+            <p>CalenNoteSecure follows GDPR (General Data Protection Regulation) principles:</p>
+            <ul>
+                <li><strong>Transparency</strong>: This policy clearly informs you of our practices</li>
+                <li><strong>Minimization</strong>: We collect only necessary data</li>
+                <li><strong>Enhanced security</strong>: AES-256 encryption of all your data</li>
+                <li><strong>User control</strong>: You keep full control of your data</li>
+                <li><strong>Right to erasure</strong>: Easy and complete deletion possible at any time</li>
+            </ul>
+            <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
+                All data remains exclusively on your device.
+            </p>
+        </section>
 
-	One-time purchase: €3.50
-	No ads
-	No subscription
-	No in-app purchases
-	No data monetization
+        <section class="section">
+            <h2>15. Contact</h2>
+            <div class="contact-info">
+                <p>For any questions regarding this privacy policy or the CalenNoteSecure app:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:duc.inde@gmail.com">duc.inde@gmail.com</a></li>
+                    <li><strong>Developer:</strong> Duc.inde</li>
+                </ul>
+                <p style="margin-top: 15px;">We are committed to answering your questions as soon as possible.</p>
+            </div>
+        </section>
 
-13. Changes
+        <section class="section">
+            <h2>16. Code transparency</h2>
+            <p>CalenNoteSecure is developed with particular attention to security and privacy:</p>
+            <ul>
+                <li>AES-256 encryption of all sensitive data</li>
+                <li>Secure storage of encryption keys</li>
+                <li>No network connection for core features</li>
+                <li>Regular security audits</li>
+                <li>Fast corrective updates in case of detected vulnerabilities</li>
+            </ul>
+        </section>
 
-	The policy may be updated if the app evolves.
-	Current version: 1.0.0
-	Last update: November 23, 2025
-
-14. GDPR compliance
-
-	CalenNoteSecure follows GDPR principles:
-	Transparency
-	Data minimization
-	Enhanced security
-	User control
-	Right to erasure
-	All data remains exclusively on your device.
-
-15. Contact
-
-	For any questions:
-	Email: duc.inde@gmail.com
-	Developer: Duc.inde
-
-16. Code transparency
-	
-	AES-256 encryption
-	Secure storage
-	No network connection
-	Regular audits
-	Maintenance updates
-
-By using CalenNoteSecure, you agree to this privacy policy.
-Your privacy remains fully under your control.
+        <footer>
+            <div class="highlight">
+                <p style="font-size: 16px; margin-bottom: 10px;">
+                    <strong>By using CalenNoteSecure, you agree to this privacy policy.</strong>
+                </p>
+                <p style="font-size: 18px; font-weight: bold; color: #27ae60;">
+                    Your privacy remains fully under your control.
+                </p>
+            </div>
+            <p style="margin-top: 30px;">© 2025 CalenNoteSecure - Duc.inde</p>
+        </footer>
+    </div>
+</body>
+</html>
