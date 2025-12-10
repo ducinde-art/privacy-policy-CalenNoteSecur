@@ -191,7 +191,9 @@
             <h1>Privacy Policy</h1>
             <h2 style="border: none; margin-top: 10px; font-size: 28px; color: #3498db;">SafeCalen</h2>
             <div class="meta">
-                <p><strong>Last updated:</strong> November 23, 2025</p>
+                <p><strong>Version:</strong> 2.0</p>
+                <p><strong>Last updated:</strong> December 9, 2024</p>
+                <p><strong>Previous version:</strong> 1.0 (November 23, 2024)</p>
                 <p><strong>Developer:</strong> Duc.inde</p>
                 <p><strong>Contact:</strong> <a href="mailto:duc.inde@gmail.com">duc.inde@gmail.com</a></p>
             </div>
@@ -228,46 +230,77 @@
             <div class="subsection">
                 <h3>2.1 Calendar</h3>
                 <ul>
-                    <li>Events: title, description, date, time, category, repetition, reminders</li>
-                    <li>Birthdays: name, date of birth, age, notes, color</li>
-                    <li>Categories: name, color, icon</li>
-                    <li>Attachments: photos, documents, links (local copy only)</li>
+                    <li><strong>Events:</strong> title, description, date, time, category</li>
+                    <li><strong>Multi-day events:</strong> start date, end date</li>
+                    <li><strong>Repetitions:</strong> daily, weekly, monthly, last day of month, yearly, custom (every X days)</li>
+                    <li><strong>All-day events:</strong> without specific time</li>
+                    <li><strong>Birthdays:</strong> name, date of birth, birth year (for automatic age calculation), notes, custom color</li>
+                    <li><strong>Categories:</strong> name, customizable color, icon</li>
+                    <li><strong>Reminders:</strong> 15 minutes, 1 hour, 1 day before event</li>
+                    <li><strong>Attachments:</strong> photos, documents, links (local copy only)</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h3>2.2 TodoList</h3>
                 <ul>
-                    <li>Tasks: text, status, creation date</li>
-                    <li>Lists: name, color, icon</li>
-                    <li>Organization of task categories</li>
+                    <li><strong>Tasks:</strong> text, completion status, creation date</li>
+                    <li><strong>Custom lists:</strong> name, color, icon from 60+ available icons</li>
+                    <li><strong>Organization:</strong> drag-and-drop between lists with haptic feedback</li>
+                    <li><strong>Statistics:</strong> task counters (total, to-do, completed) show/hide</li>
+                    <li><strong>Calendar sync:</strong> option to add tasks to calendar preserving original icon and color</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h3>2.3 Security</h3>
                 <ul>
-                    <li>Password (AES-256 encrypted)</li>
-                    <li>PIN code (AES-256 encrypted)</li>
-                    <li>Biometric authentication (handled by Android/iOS - biometrics created on your device)</li>
+                    <li><strong>Password:</strong> AES-256 encrypted, independently configurable</li>
+                    <li><strong>PIN code:</strong> AES-256 encrypted, 4 to 6 digits, independently configurable</li>
+                    <li><strong>Biometric authentication:</strong> fingerprint or face recognition (managed by Android/iOS), independently configurable</li>
+                    <li><strong>Initial setup:</strong> setup wizard on first launch to choose security methods</li>
+                    <li><strong>Multi-methods:</strong> ability to enable multiple methods simultaneously with navigation between them</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h3>2.4 Settings</h3>
                 <ul>
-                    <li>Theme (light/dark/system)</li>
-                    <li>Language (French/English)</li>
-                    <li>Display preferences</li>
-                    <li>Notification settings</li>
+                    <li><strong>Theme:</strong> light, dark, or automatic (follows system)</li>
+                    <li><strong>Language:</strong> French or English</li>
+                    <li><strong>Display preferences:</strong> TodoList statistics, task creation dates</li>
+                    <li><strong>Agenda filters:</strong> upcoming period (tomorrow, week, 2 weeks, month, all)</li>
+                    <li><strong>Notification settings:</strong> enable/disable reminders</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h3>2.5 Trash</h3>
                 <ul>
-                    <li>Temporarily deleted items</li>
-                    <li>Permanent deletion only manually</li>
+                    <li><strong>Deleted items:</strong> events, birthdays, tasks, TodoList categories</li>
+                    <li><strong>Metadata:</strong> type, title, description, deletion date</li>
+                    <li><strong>Restoration:</strong> ability to restore deleted items</li>
+                    <li><strong>Permanent deletion:</strong> only manual, item by item or complete emptying</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>2.6 Cache and synchronization</h3>
+                <ul>
+                    <li><strong>Unified cache manager:</strong> DataCacheManager with Singleton pattern</li>
+                    <li><strong>Real-time sync:</strong> listener system for automatic updates across all pages</li>
+                    <li><strong>In-memory data:</strong> events, categories, tasks, custom colors</li>
+                    <li><strong>Startup loading:</strong> pre-loading all data for optimal performance</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>2.7 Custom colors</h3>
+                <ul>
+                    <li><strong>Default palette:</strong> 25+ predefined colors for categories and birthdays</li>
+                    <li><strong>Custom colors:</strong> unlimited creation via advanced color picker</li>
+                    <li><strong>Storage:</strong> secure storage of custom colors with unique identifier</li>
+                    <li><strong>Management:</strong> deletion of unused custom colors</li>
                 </ul>
             </div>
         </section>
@@ -286,8 +319,10 @@
                 <li>Browsing history, cookies</li>
                 <li>Banking information</li>
                 <li>Advertising identifiers</li>
-                <li>Device identifiers</li>
+                <li>Device data (model, OS version, etc.)</li>
                 <li>Photos/documents outside those you choose to add</li>
+                <li>Usage data or analytics</li>
+                <li>External file metadata</li>
             </ul>
             <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #e74c3c;">
                 No data ever leaves your device.
@@ -301,52 +336,83 @@
             <div class="subsection">
                 <h4>Calendar</h4>
                 <ul>
-                    <li>Displaying/organizing your events</li>
-                    <li>Managing birthdays</li>
-                    <li>Managing categories</li>
-                    <li>Storing local attachments</li>
+                    <li>Display/organize your events with custom monthly view</li>
+                    <li>Manage multi-day events with continuous visual bars</li>
+                    <li>Manage birthdays with automatic age calculation</li>
+                    <li>Manage categories with colors and icons</li>
+                    <li>Manage repetitions (daily, weekly, monthly, yearly, custom)</li>
+                    <li>Store attachments locally</li>
+                    <li>Display events by date in agenda with period filters</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h4>TodoList</h4>
                 <ul>
-                    <li>Organizing your tasks</li>
-                    <li>Managing custom lists</li>
-                    <li>(Optional) Syncing tasks with the calendar</li>
+                    <li>Organize your tasks by custom lists</li>
+                    <li>Manage lists with customizable colors and icons</li>
+                    <li>Reorganize tasks by drag-and-drop with haptic feedback</li>
+                    <li>Mark tasks as completed/not completed</li>
+                    <li>Display statistics (total, to-do, completed)</li>
+                    <li>(Optional) Sync tasks with calendar</li>
+                    <li>(Optional) Add entire lists to calendar</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h4>Notifications</h4>
                 <ul>
-                    <li>Sending local reminders</li>
+                    <li>Send local reminders (15min, 1h, 1 day before)</li>
+                    <li>Automatically schedule notifications for events</li>
+                    <li>Automatically cancel notifications when deleting events</li>
                     <li>No internet connection required</li>
+                    <li>Configured timezone (Europe/Paris)</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h4>Security</h4>
                 <ul>
-                    <li>Protecting your data (AES-256)</li>
-                    <li>Biometric / PIN / password authentication</li>
-                    <li>Secure storage of the unique key</li>
+                    <li>Protect your data (AES-256)</li>
+                    <li>Multi-method authentication (biometrics, PIN, password) independent</li>
+                    <li>Secure storage of unique encryption key via Flutter Secure Storage</li>
+                    <li>Setup wizard on first launch</li>
+                    <li>Navigation between authentication methods</li>
+                    <li>Detection and alert for default password</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h4>Personalization</h4>
                 <ul>
-                    <li>Theme</li>
-                    <li>Language</li>
-                    <li>Display sections</li>
+                    <li>Light/dark/automatic theme</li>
+                    <li>French/English language</li>
+                    <li>Section display (statistics, dates)</li>
+                    <li>Period filters for agenda</li>
+                    <li>Expand/collapse all sections at once</li>
+                    <li>Create and manage custom colors</li>
                 </ul>
             </div>
 
             <div class="subsection">
-                <h4>Backup</h4>
+                <h4>Backup and restoration</h4>
                 <ul>
-                    <li>Export / import encrypted backups</li>
+                    <li>Export complete encrypted backups (.scbk format)</li>
+                    <li>Import backups with automatic decryption</li>
+                    <li>Custom password protection for export</li>
+                    <li>Content preview before import (number of events, categories, tasks, etc.)</li>
+                    <li>Trash for restoring deleted items</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h4>Advanced features</h4>
+                <ul>
+                    <li>Postpone events to tomorrow with cancellation option</li>
+                    <li>Selective deletion of occurrences or all occurrences of recurring events</li>
+                    <li>Manual date entry with automatic formatting (dd/mm/yyyy)</li>
+                    <li>Dual date selection method (manual entry + visual calendar)</li>
+                    <li>Automatic text capitalization</li>
                 </ul>
             </div>
         </section>
@@ -360,32 +426,61 @@
                     <p><strong>The following data is encrypted with AES-256:</strong></p>
                 </div>
                 <ul>
-                    <li>Events</li>
+                    <li>Events (simple, multi-day, recurring)</li>
                     <li>Birthdays</li>
-                    <li>Tasks</li>
-                    <li>Categories</li>
+                    <li>TodoList tasks</li>
+                    <li>Categories (calendar and TodoList)</li>
                     <li>File metadata</li>
-                    <li>Password & PIN</li>
-                    <li>Trash</li>
+                    <li>Password</li>
+                    <li>PIN code</li>
+                    <li>Trash (all deleted items)</li>
+                    <li>Custom colors</li>
+                    <li>Settings and preferences</li>
                 </ul>
             </div>
 
             <div class="subsection">
-                <h3>5.2 Authentication</h3>
+                <h3>5.2 Multi-method authentication</h3>
+                <div class="info-box">
+                    <p><strong>Three independent configurable methods:</strong></p>
+                </div>
                 <ul>
-                    <li>Biometrics (fingerprint, facial recognition)</li>
-                    <li>PIN code (4 to 6 digits)</li>
-                    <li>Customizable password</li>
+                    <li><strong>Biometrics:</strong> fingerprint or face recognition (managed by system)</li>
+                    <li><strong>PIN code:</strong> 4 to 6 digits, customizable</li>
+                    <li><strong>Password:</strong> free text, minimum 4 characters</li>
                 </ul>
-                <p><em>All modes are optional and independent.</em></p>
+                
+                <h4>Security features:</h4>
+                <ul>
+                    <li>Independent enable/disable of each method</li>
+                    <li>Smooth navigation between methods during authentication</li>
+                    <li>Setup wizard on first launch</li>
+                    <li>Individual modification of each method in settings</li>
+                    <li>Default password detection with prompt to change</li>
+                    <li>"Don't remind me" option for default password alert</li>
+                    <li>Biometric confirmation for sensitive actions (security disable)</li>
+                </ul>
             </div>
 
             <div class="subsection">
                 <h3>5.3 Encryption key</h3>
                 <ul>
-                    <li>Generated automatically and locally</li>
-                    <li>Stored securely on your device</li>
+                    <li>Automatically and locally generated on first use</li>
+                    <li>Securely stored via Flutter Secure Storage</li>
                     <li>Never leaves your device</li>
+                    <li>Used for all encryption/decryption operations</li>
+                    <li>Unique per installation</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>5.4 Encrypted backups</h3>
+                <ul>
+                    <li><strong>Proprietary format:</strong> .scbk files (SafeCalen Backup)</li>
+                    <li><strong>AES-256 encryption:</strong> with custom password chosen at export</li>
+                    <li><strong>Complete content:</strong> all events, categories, tasks, colors, trash</li>
+                    <li><strong>Metadata:</strong> version, export date for compatibility</li>
+                    <li><strong>Secure import:</strong> password verification and preview before restoration</li>
                 </ul>
             </div>
         </section>
@@ -401,24 +496,29 @@
                 <ul>
                     <li>A copy is saved in the app's private directory</li>
                     <li>The original remains in your gallery</li>
+                    <li>Camera permission requested only when used</li>
                 </ul>
 
                 <h4>Photos (gallery)</h4>
                 <ul>
-                    <li>A local copy is saved</li>
+                    <li>A local copy is saved in the app</li>
                     <li>The original photo is never modified</li>
+                    <li>Gallery permission requested only when used</li>
                 </ul>
 
                 <h4>Documents</h4>
                 <ul>
                     <li>A copy is saved in the app's private directory</li>
+                    <li>Supported formats: PDF, DOC, DOCX, TXT, XLSX, XLS</li>
                     <li>Original files remain intact in your folders</li>
+                    <li>Storage permission requested only when used</li>
                 </ul>
 
                 <h4>Links</h4>
                 <ul>
-                    <li>Stored as text</li>
+                    <li>Stored as encrypted text</li>
                     <li>No automatic downloads</li>
+                    <li>Opens in external browser when clicked</li>
                 </ul>
             </div>
 
@@ -428,43 +528,55 @@
                 <h4>Metadata</h4>
                 <p>Names, types, paths → <strong>AES-256 encrypted</strong> in the database.</p>
 
-                <h4>Files</h4>
+                <h4>Physical files</h4>
                 <ul>
-                    <li>Stored in the app's private directory</li>
-                    <li>Protected by Android/iOS sandbox</li>
-                    <li>Inaccessible to other apps</li>
+                    <li>Stored in the app's private directory (sandbox)</li>
+                    <li>Protected by OS isolation (Android/iOS)</li>
+                    <li>Inaccessible to other apps without root/jailbreak permissions</li>
+                    <li>Automatically deleted when uninstalling the app</li>
                 </ul>
 
-                <h4>Transparency</h4>
+                <h4>Important transparency</h4>
                 <div class="warning">
-                    <p><strong>⚠️ The files themselves (photos, documents) are not encrypted.</strong></p>
+                    <p><strong>⚠️ The files themselves (photos, documents) are NOT individually encrypted.</strong></p>
                     <p>They remain protected by:</p>
                     <ul>
-                        <li>OS sandbox isolation</li>
-                        <li>Restricted access to internal storage</li>
-                        <li>Device lock</li>
+                        <li>OS isolation (Android/iOS sandbox)</li>
+                        <li>Restricted access to app's internal storage</li>
+                        <li>Device lock (PIN/fingerprint/face)</li>
+                        <li>OS access permissions</li>
                     </ul>
                 </div>
+                
                 <div class="danger">
-                    <p><strong>⚠️ On a rooted or compromised device, they may be readable.</strong></p>
+                    <p><strong>⚠️ On a rooted, jailbroken, or compromised device, these files could theoretically be accessible.</strong></p>
+                    <p>This limitation is due to technical constraints of mobile operating systems and the trade-off between security and performance.</p>
                 </div>
             </div>
 
             <div class="subsection">
-                <h3>6.3 Deletion</h3>
-                <p>Deleting an attachment removes only the local copy.</p>
-                <p>Your original files in the gallery/folders remain intact.</p>
+                <h3>6.3 Attachment management</h3>
+                <ul>
+                    <li><strong>Adding:</strong> via event context menu (photos, documents, links)</li>
+                    <li><strong>Viewing:</strong> open photos in fullscreen with zoom</li>
+                    <li><strong>Sharing:</strong> ability to share documents via system</li>
+                    <li><strong>Deletion:</strong> deletes only local copy, never the original</li>
+                    <li><strong>Indicators:</strong> paperclip icon on events with attachments</li>
+                </ul>
             </div>
 
             <div class="subsection">
-                <h3>6.4 Recommendations</h3>
+                <h3>6.4 Security recommendations</h3>
                 <div class="info-box">
                     <p><strong>For optimal security:</strong></p>
                     <ul>
                         <li>Enable device locking (PIN, fingerprint, face)</li>
-                        <li>Do not share your device with untrusted persons</li>
+                        <li>Use multiple security methods in SafeCalen (biometrics + PIN/password)</li>
+                        <li>Don't share your device with untrusted persons</li>
                         <li>Use encrypted backups regularly</li>
-                        <li>Avoid rooted/jailbroken devices</li>
+                        <li>Avoid rooted/jailbroken devices for sensitive data</li>
+                        <li>Change default password on first launch</li>
+                        <li>Keep your OS up to date</li>
                     </ul>
                 </div>
             </div>
@@ -472,138 +584,414 @@
 
         <section class="section">
             <h2>7. Notifications and reminders</h2>
-            <ul>
-                <li>Local notifications only (generated on your device)</li>
-                <li>Permissions requested for reminders</li>
-                <li>No data sent externally</li>
-                <li>No server required</li>
-            </ul>
+            
+            <div class="subsection">
+                <h3>7.1 Operation</h3>
+                <ul>
+                    <li><strong>Local notifications only:</strong> generated on your device via Flutter Local Notifications</li>
+                    <li><strong>No server:</strong> no data sent externally</li>
+                    <li><strong>Configurable reminders:</strong> 15 minutes, 1 hour, 1 day before event</li>
+                    <li><strong>Automatic scheduling:</strong> when creating events with reminders</li>
+                    <li><strong>Automatic cancellation:</strong> when modifying or deleting events</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>7.2 Configuration</h3>
+                <ul>
+                    <li><strong>Timezone:</strong> Europe/Paris configured by default</li>
+                    <li><strong>Permissions:</strong> requested only on first use</li>
+                    <li><strong>Enable/disable:</strong> in app settings</li>
+                    <li><strong>Notification channel:</strong> "calendar_channel" for Android</li>
+                    <li><strong>Priority:</strong> high to ensure delivery</li>
+                </ul>
+            </div>
         </section>
 
         <section class="section">
             <h2>8. Children's data</h2>
             <div class="highlight">
-                <p>SafeCalen collects no personally identifiable data.</p>
-                <p>No ads, no in-app purchases.</p>
-                <p>App suitable for all ages.</p>
+                <p><strong>SafeCalen collects no personally identifiable data.</strong></p>
+                <p>No ads, no in-app purchases, no inappropriate content.</p>
+                <p>App suitable for all ages and compliant with child protection regulations (COPPA, etc.).</p>
+                <p>100% local operation without internet connection required for core features.</p>
             </div>
         </section>
 
         <section class="section">
             <h2>9. Your rights</h2>
             <p>You can at any time:</p>
-            <ul>
-                <li>View all your data in the app</li>
-                <li>Export your data (encrypted backup)</li>
-                <li>Delete your data (partially or completely)</li>
-                <li>Empty the trash</li>
-                <li>Completely reset the app</li>
-                <li>Change your password / PIN / biometric settings</li>
-                <li>Contact us for any questions</li>
-            </ul>
-            <p><strong>Important:</strong> Uninstalling the app automatically deletes all local data.</p>
+            
+            <div class="subsection">
+                <h3>9.1 Data access</h3>
+                <ul>
+                    <li>View all your data directly in the app</li>
+                    <li>View usage statistics (TodoList)</li>
+                    <li>Access history via agenda with period filters</li>
+                    <li>See items in trash before permanent deletion</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.2 Export and backup</h3>
+                <ul>
+                    <li>Export all your data in an encrypted file (.scbk)</li>
+                    <li>Choose a custom password to protect the export</li>
+                    <li>Share the file via system (email, cloud, etc.)</li>
+                    <li>Keep multiple backups with automatic timestamping</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.3 Data deletion</h3>
+                <ul>
+                    <li>Delete individual events, tasks, or categories</li>
+                    <li>Delete only one occurrence or all occurrences of a recurring event</li>
+                    <li>Delete all completed tasks at once</li>
+                    <li>Empty trash (permanent deletion)</li>
+                    <li>Completely reset the app (deletes everything)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.4 Restoration</h3>
+                <ul>
+                    <li>Restore items from trash</li>
+                    <li>Import a complete encrypted backup</li>
+                    <li>Content preview before import</li>
+                    <li>Undo postponed event</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.5 Security settings modification</h3>
+                <ul>
+                    <li>Change your password at any time</li>
+                    <li>Create or modify your PIN code</li>
+                    <li>Enable/disable biometric authentication</li>
+                    <li>Independently configure each security method</li>
+                    <li>Navigate between methods during authentication</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.6 Personalization</h3>
+                <ul>
+                    <li>Change theme (light/dark/automatic)</li>
+                    <li>Change language (French/English)</li>
+                    <li>Show/hide TodoList statistics</li>
+                    <li>Show/hide task creation dates</li>
+                    <li>Configure agenda period filter</li>
+                    <li>Create and manage custom colors</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.7 Contact</h3>
+                <ul>
+                    <li>Contact us for any questions via duc.inde@gmail.com</li>
+                    <li>Request clarifications about the privacy policy</li>
+                    <li>Report a security issue</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <p><strong>Important:</strong> Uninstalling the app automatically deletes all local data irreversibly.</p>
+                <p><strong>Recommendation:</strong> Create an encrypted backup before uninstalling the app if you want to keep your data.</p>
+            </div>
         </section>
 
         <section class="section">
             <h2>10. Android / iOS permissions</h2>
 
             <div class="subsection">
-                <h3>Required permissions</h3>
+                <h3>10.1 Required permissions</h3>
                 <ul>
-                    <li><strong>Storage</strong>: To save your data locally</li>
-                    <li><strong>Notifications</strong>: To send event reminders</li>
+                    <li><strong>Storage:</strong> To save your data locally in the app's private space</li>
+                    <li><strong>Notifications:</strong> To send event reminders (can be disabled in settings)</li>
                 </ul>
             </div>
 
             <div class="subsection">
-                <h3>Optional permissions</h3>
+                <h3>10.2 Optional permissions</h3>
+                <p><em>Requested only when a feature needs them:</em></p>
                 <ul>
-                    <li><strong>Camera</strong>: If you wish to take a photo for an event</li>
-                    <li><strong>Gallery</strong>: If you wish to add an existing photo</li>
-                    <li><strong>Documents</strong>: If you wish to attach a document</li>
-                    <li><strong>Biometrics</strong>: If you enable biometric authentication</li>
+                    <li><strong>Camera:</strong> If you want to take a photo for an event</li>
+                    <li><strong>Gallery/Photos:</strong> If you want to add an existing photo</li>
+                    <li><strong>Documents/Files:</strong> If you want to attach a document or import a backup</li>
+                    <li><strong>Biometrics (fingerprint/face):</strong> If you enable biometric authentication</li>
                 </ul>
             </div>
 
-            <p><em>Permissions are requested only when a feature needs them.</em></p>
+            <div class="subsection">
+                <h3>10.3 Permission usage</h3>
+                <div class="info-box">
+                    <p><strong>Transparency commitment:</strong></p>
+                    <ul>
+                        <li>No permission is requested without valid reason</li>
+                        <li>Permissions are requested at time of use, not at installation</li>
+                        <li>You can refuse a permission and use other features</li>
+                        <li>You can revoke permissions at any time in system settings</li>
+                        <li>Permission data is never transmitted off device</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section class="section">
             <h2>11. Technologies used</h2>
-            <div class="feature-list">
-                <div class="feature-item">Flutter</div>
-                <div class="feature-item">Dart</div>
-                <div class="feature-item">Flutter Secure Storage</div>
-                <div class="feature-item">Encrypt (AES-256)</div>
-                <div class="feature-item">Local Auth</div>
-                <div class="feature-item">Flutter Local Notifications</div>
+            
+            <div class="subsection">
+                <h3>11.1 Framework and language</h3>
+                <div class="feature-list">
+                    <div class="feature-item">Flutter (cross-platform framework)</div>
+                    <div class="feature-item">Dart (programming language)</div>
+                </div>
             </div>
-            <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
-                No external service, no tracker, no cloud.
-            </p>
+
+            <div class="subsection">
+                <h3>11.2 Security libraries</h3>
+                <ul>
+                    <li><strong>flutter_secure_storage:</strong> Secure storage of encryption keys</li>
+                    <li><strong>encrypt:</strong> AES-256 encryption of sensitive data</li>
+                    <li><strong>local_auth:</strong> Biometric authentication (fingerprint/face)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>11.3 Functional libraries</h3>
+                <ul>
+                    <li><strong>flutter_local_notifications:</strong> Local notifications for reminders</li>
+                    <li><strong>shared_preferences:</strong> User preferences and settings</li>
+                    <li><strong>file_picker:</strong> Document selection</li>
+                    <li><strong>image_picker:</strong> Photo capture and selection</li>
+                    <li><strong>path_provider:</strong> System directory access</li>
+                    <li><strong>url_launcher:</strong> Opening external links</li>
+                    <li><strong>share_plus:</strong> File sharing via system</li>
+                    <li><strong>permission_handler:</strong> System permissions management</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>11.4 Interface libraries</h3>
+                <ul>
+                    <li><strong>intl:</strong> Internationalization and date formatting</li>
+                    <li><strong>fl_chart:</strong> Charts and statistics</li>
+                    <li><strong>flutter_colorpicker:</strong> Advanced color picker</li>
+                    <li><strong>flutter_localizations:</strong> Multilingual support</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
+                    No external service, no tracker, no cloud, no analytics.
+                </p>
+                <p style="text-align: center; margin-top: 10px;">
+                    All libraries used are open-source and work locally on your device.
+                </p>
+            </div>
         </section>
 
         <section class="section">
             <h2>12. Monetization</h2>
             <div class="info-box">
                 <ul>
-                    <li><strong>One-time purchase:</strong> €3.50</li>
+                    <li><strong>Business model:</strong> One-time purchase</li>
+                    <li><strong>Price:</strong> €3.50 (may vary by country)</li>
                     <li>✓ No ads</li>
                     <li>✓ No subscription</li>
                     <li>✓ No additional in-app purchases</li>
                     <li>✓ No monetization of your data</li>
+                    <li>✓ No commercial partnerships</li>
+                    <li>✓ No data sale to third parties</li>
                 </ul>
-                <p style="margin-top: 15px;"><strong>All features included from purchase.</strong></p>
+                <p style="margin-top: 15px;"><strong>All features included from purchase, forever.</strong></p>
+                <p style="margin-top: 10px;">Future updates will be free for all users who purchased the app.</p>
             </div>
         </section>
 
         <section class="section">
-            <h2>13. Changes</h2>
-            <p>This policy may be updated if the app evolves.</p>
-            <p>In case of significant changes, we will inform you via an update.</p>
-            <ul>
-                <li><strong>Current version:</strong> 1.0.0</li>
-                <li><strong>Last modification:</strong> November 23, 2025</li>
-            </ul>
+            <h2>13. Policy changes</h2>
+            
+            <div class="subsection">
+                <h3>13.1 Versioning</h3>
+                <ul>
+                    <li><strong>Current version:</strong> 2.0 (December 9, 2024)</li>
+                    <li><strong>Previous version:</strong> 1.0 (November 23, 2024)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>13.2 Main changes (v1.0 → v2.0)</h3>
+                <ul>
+                    <li>Added multi-day event management</li>
+                    <li>Added custom repetitions (every X days)</li>
+                    <li>Added unified cache system (DataCacheManager)</li>
+                    <li>TodoList improvements (drag-and-drop, statistics)</li>
+                    <li>Added trash system with restoration</li>
+                    <li>Added encrypted backups (. scbk format)</li>
+                    <li>Added color customization</li>
+                    <li>Added bilingual support French/English</li>
+                    <li>Added independent multi-method authentication</li>
+                    <li>Added "Postpone to tomorrow" feature</li>
+                    <li>Added TodoList to Calendar synchronization</li>
+                    <li>Enhanced security (default password detection)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>13.3 Change communication</h3>
+                <p>This policy may be updated as the app evolves.</p>
+                <p>In case of significant changes regarding your data or privacy:</p>
+                <ul>
+                    <li>We will inform you via an app update</li>
+                    <li>Version and date will be clearly indicated in the header</li>
+                    <li>A summary of changes will be provided</li>
+                    <li>You will be able to consult version history</li>
+                </ul>
+                <p><strong>Important:</strong> We will never change our core privacy commitments (no data collection, 100% local storage, encryption).</p>
+            </div>
         </section>
 
         <section class="section">
             <h2>14. GDPR compliance</h2>
-            <p>SafeCalen follows GDPR (General Data Protection Regulation) principles:</p>
-            <ul>
-                <li><strong>Transparency</strong>: This policy clearly informs you of our practices</li>
-                <li><strong>Minimization</strong>: We collect only necessary data</li>
-                <li><strong>Enhanced security</strong>: AES-256 encryption of all your data</li>
-                <li><strong>User control</strong>: You keep full control of your data</li>
-                <li><strong>Right to erasure</strong>: Easy and complete deletion possible at any time</li>
-            </ul>
-            <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
-                All data remains exclusively on your device.
-            </p>
+            <p>SafeCalen respects and exceeds GDPR (General Data Protection Regulation) requirements:</p>
+            
+            <div class="subsection">
+                <h3>14.1 Applied GDPR principles</h3>
+                <ul>
+                    <li><strong>Transparency:</strong> This policy clearly informs you of all our practices</li>
+                    <li><strong>Data minimization:</strong> We collect only data strictly necessary for operation</li>
+                    <li><strong>Purpose limitation:</strong> Data serves only the described functionalities</li>
+                    <li><strong>Accuracy:</strong> You control and modify your data at any time</li>
+                    <li><strong>Storage limitation:</strong> Data is kept as long as you use the app</li>
+                    <li><strong>Integrity and confidentiality:</strong> AES-256 encryption and secure storage</li>
+                    <li><strong>Accountability:</strong> We document all our data protection practices</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>14.2 Guaranteed GDPR rights</h3>
+                <ul>
+                    <li><strong>Right of access:</strong> You see all your data in the app</li>
+                    <li><strong>Right to rectification:</strong> You modify your data at any time</li>
+                    <li><strong>Right to erasure:</strong> You delete your data partially or completely</li>
+                    <li><strong>Right to portability:</strong> You export your data in a structured format (encrypted JSON)</li>
+                    <li><strong>Right to object:</strong> Local architecture without imposed processing</li>
+                    <li><strong>Right to restriction:</strong> You control all functionalities</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>14.3 "Privacy by Design" architecture</h3>
+                <div class="highlight">
+                    <p><strong>SafeCalen is designed from the ground up to guarantee your privacy:</strong></p>
+                    <ul>
+                        <li>No server connection (no backend)</li>
+                        <li>No data collection (no external database)</li>
+                        <li>100% local and encrypted storage</li>
+                        <li>You are the only data controller of your data</li>
+                        <li>No subcontractors (no third-party services)</li>
+                        <li>No international data transfer</li>
+                        <li>No profiling or automated decision-making</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>14.4 Absence of specific GDPR obligations</h3>
+                <p>Due to our 100% local architecture, certain GDPR obligations do not apply:</p>
+                <ul>
+                    <li><strong>No DPO (Data Protection Officer):</strong> No large-scale processing</li>
+                    <li><strong>No DPIA (Data Protection Impact Assessment):</strong> No risk to rights and freedoms</li>
+                    <li><strong>No processing register:</strong> No personal data processing</li>
+                    <li><strong>No breach notification:</strong> No database to hack</li>
+                    <li><strong>No consent required:</strong> You directly control your data</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
+                    By using SafeCalen, you benefit from the highest level of privacy protection possible.
+                </p>
+                <p style="text-align: center; margin-top: 10px;">
+                    Your data never leaves your device and remains under your exclusive control.
+                </p>
+            </div>
         </section>
 
         <section class="section">
             <h2>15. Contact</h2>
             <div class="contact-info">
-                <p>For any questions regarding this privacy policy or the SafeCalen app:</p>
+                <p><strong>For any questions regarding this privacy policy or the SafeCalen app:</strong></p>
                 <ul>
                     <li><strong>Email:</strong> <a href="mailto:duc.inde@gmail.com">duc.inde@gmail.com</a></li>
                     <li><strong>Developer:</strong> Duc.inde</li>
+                    <li><strong>Response:</strong> We are committed to responding as soon as possible (usually within 48 hours)</li>
                 </ul>
-                <p style="margin-top: 15px;">We are committed to answering your questions as soon as possible.</p>
+                
+                <p style="margin-top: 15px;"><strong>Types of accepted requests:</strong></p>
+                <ul>
+                    <li>Questions about the privacy policy</li>
+                    <li>Clarifications on data usage</li>
+                    <li>Security issue reporting</li>
+                    <li>Improvement suggestions</li>
+                    <li>Technical support</li>
+                </ul>
             </div>
         </section>
 
         <section class="section">
-            <h2>16. Code transparency</h2>
-            <p>SafeCalen is developed with particular attention to security and privacy:</p>
-            <ul>
-                <li>AES-256 encryption of all sensitive data</li>
-                <li>Secure storage of encryption keys</li>
-                <li>No network connection for core features</li>
-                <li>Regular security audits</li>
-                <li>Fast corrective updates in case of detected vulnerabilities</li>
-            </ul>
+            <h2>16. Code transparency and security</h2>
+            
+            <div class="subsection">
+                <h3>16.1 Development practices</h3>
+                <p>SafeCalen is developed with particular attention to security and privacy:</p>
+                <ul>
+                    <li>AES-256 encryption for all sensitive data</li>
+                    <li>Secure key storage via Flutter Secure Storage</li>
+                    <li>No network connection for core features</li>
+                    <li>Validation and sanitization of all user inputs</li>
+                    <li>Secure memory management (no data leaks)</li>
+                    <li>Modular architecture with separation of concerns</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>16.2 Updates and patches</h3>
+                <ul>
+                    <li>Regular updates for bug fixes and improvements</li>
+                    <li>Priority security patches in case of detected vulnerability</li>
+                    <li>Maintained compatibility with latest Android and iOS versions</li>
+                    <li>Thorough testing before each release</li>
+                    <li>Semantic versioning for change tracking</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>16.3 Audits and verification</h3>
+                <ul>
+                    <li>Regular code review to detect security issues</li>
+                    <li>Encryption/decryption testing to verify integrity</li>
+                    <li>Data leak verification</li>
+                    <li>Permission testing (verifying no excessive permissions requested)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>16.4 Transparency commitment</h3>
+                <div class="info-box">
+                    <p><strong>We commit to:</strong></p>
+                    <ul>
+                        <li>Keep this privacy policy up to date</li>
+                        <li>Document all significant changes</li>
+                        <li>Respond quickly to security questions</li>
+                        <li>Fix vulnerabilities as soon as possible</li>
+                        <li>Never add telemetry or tracking without your explicit consent</li>
+                        <li>Maintain our complete privacy commitment</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <footer>
@@ -615,7 +1003,11 @@
                     Your privacy remains fully under your control.
                 </p>
             </div>
-            <p style="margin-top: 30px;">© 2025 SafeCalen - Duc.inde</p>
+            
+            <p style="margin-top: 30px;">© 2024-2025 SafeCalen - Duc.inde</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                Privacy policy version 2.0
+            </p>
         </footer>
     </div>
 </body>
