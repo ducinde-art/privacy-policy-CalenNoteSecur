@@ -1,4 +1,4 @@
-html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -191,7 +191,9 @@ html<!DOCTYPE html>
             <h1>Politique de confidentialité</h1>
             <h2 style="border: none; margin-top: 10px; font-size: 28px; color: #3498db;">SafeCalen</h2>
             <div class="meta">
-                <p><strong>Dernière mise à jour :</strong> 23 novembre 2025</p>
+                <p><strong>Version :</strong> 2.0</p>
+                <p><strong>Dernière mise à jour :</strong> 9 décembre 2024</p>
+                <p><strong>Version précédente :</strong> 1.0 (23 novembre 2024)</p>
                 <p><strong>Développeur :</strong> Duc.inde</p>
                 <p><strong>Contact :</strong> <a href="mailto:duc.inde@gmail.com">duc.inde@gmail.com</a></p>
             </div>
@@ -228,46 +230,77 @@ html<!DOCTYPE html>
             <div class="subsection">
                 <h3>2.1 Calendrier</h3>
                 <ul>
-                    <li>Événements : titre, description, date, heure, catégorie, répétition, rappels</li>
-                    <li>Anniversaires : nom, date de naissance, âge, notes, couleur</li>
-                    <li>Catégories : nom, couleur, icône</li>
-                    <li>Pièces jointes : photos, documents, liens (copie locale uniquement)</li>
+                    <li><strong>Événements :</strong> titre, description, date, heure, catégorie</li>
+                    <li><strong>Événements multi-jours :</strong> date de début, date de fin</li>
+                    <li><strong>Répétitions :</strong> quotidienne, hebdomadaire, mensuelle, dernier jour du mois, annuelle, personnalisée (tous les X jours)</li>
+                    <li><strong>Événements journée entière :</strong> sans heure spécifique</li>
+                    <li><strong>Anniversaires :</strong> nom, date de naissance, année de naissance (pour calcul automatique de l'âge), notes, couleur personnalisée</li>
+                    <li><strong>Catégories :</strong> nom, couleur personnalisable, icône</li>
+                    <li><strong>Rappels :</strong> 15 minutes, 1 heure, 1 jour avant l'événement</li>
+                    <li><strong>Pièces jointes :</strong> photos, documents, liens (copie locale uniquement)</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h3>2.2 TodoList</h3>
                 <ul>
-                    <li>Tâches : texte, statut, date de création</li>
-                    <li>Listes : nom, couleur, icône</li>
-                    <li>Organisation des catégories de tâches</li>
+                    <li><strong>Tâches :</strong> texte, statut de complétion, date de création</li>
+                    <li><strong>Listes personnalisées :</strong> nom, couleur, icône parmi 60+ icônes disponibles</li>
+                    <li><strong>Organisation :</strong> déplacement par glisser-déposer entre listes avec retour haptique</li>
+                    <li><strong>Statistiques :</strong> compteurs de tâches (total, à faire, complétées) affichables/masquables</li>
+                    <li><strong>Synchronisation calendrier :</strong> option d'ajouter des tâches au calendrier avec préservation de l'icône et couleur d'origine</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h3>2.3 Sécurité</h3>
                 <ul>
-                    <li>Mot de passe (chiffré AES-256)</li>
-                    <li>Code PIN (chiffré AES-256)</li>
-                    <li>Authentification biométrique (gérée par Android/iOS - biométrie que vous créez via votre téléphone)</li>
+                    <li><strong>Mot de passe :</strong> chiffré AES-256, configurable indépendamment</li>
+                    <li><strong>Code PIN :</strong> chiffré AES-256, 4 à 6 chiffres, configurable indépendamment</li>
+                    <li><strong>Authentification biométrique :</strong> empreinte digitale ou reconnaissance faciale (gérée par Android/iOS), configurable indépendamment</li>
+                    <li><strong>Configuration initiale :</strong> assistant de configuration au premier lancement pour choisir les méthodes de sécurité</li>
+                    <li><strong>Multi-méthodes :</strong> possibilité d'activer plusieurs méthodes simultanément avec navigation entre elles</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h3>2.4 Paramètres</h3>
                 <ul>
-                    <li>Thème (clair/sombre/système)</li>
-                    <li>Langue (français/anglais)</li>
-                    <li>Préférences d'affichage</li>
-                    <li>Paramètres de notifications</li>
+                    <li><strong>Thème :</strong> clair, sombre ou automatique (suit le système)</li>
+                    <li><strong>Langue :</strong> français ou anglais</li>
+                    <li><strong>Préférences d'affichage :</strong> statistiques TodoList, dates de création des tâches</li>
+                    <li><strong>Filtres agenda :</strong> période à venir (demain, semaine, 2 semaines, mois, tout)</li>
+                    <li><strong>Paramètres de notifications :</strong> activation/désactivation des rappels</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h3>2.5 Corbeille</h3>
                 <ul>
-                    <li>Éléments supprimés temporairement</li>
-                    <li>Suppression définitive uniquement manuelle</li>
+                    <li><strong>Éléments supprimés :</strong> événements, anniversaires, tâches, catégories TodoList</li>
+                    <li><strong>Métadonnées :</strong> type, titre, description, date de suppression</li>
+                    <li><strong>Restauration :</strong> possibilité de restaurer les éléments supprimés</li>
+                    <li><strong>Suppression définitive :</strong> uniquement manuelle, élément par élément ou vidage complet</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>2.6 Cache et synchronisation</h3>
+                <ul>
+                    <li><strong>Gestionnaire de cache unifié :</strong> DataCacheManager avec pattern Singleton</li>
+                    <li><strong>Synchronisation temps réel :</strong> système de listeners pour mise à jour automatique entre toutes les pages</li>
+                    <li><strong>Données en mémoire :</strong> événements, catégories, tâches, couleurs personnalisées</li>
+                    <li><strong>Chargement au démarrage :</strong> pré-chargement de toutes les données pour performances optimales</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>2.7 Couleurs personnalisées</h3>
+                <ul>
+                    <li><strong>Palette par défaut :</strong> 25+ couleurs prédéfinies pour catégories et anniversaires</li>
+                    <li><strong>Couleurs personnalisées :</strong> création illimitée via sélecteur de couleurs avancé</li>
+                    <li><strong>Sauvegarde :</strong> stockage sécurisé des couleurs personnalisées avec identifiant unique</li>
+                    <li><strong>Gestion :</strong> suppression des couleurs personnalisées non utilisées</li>
                 </ul>
             </div>
         </section>
@@ -286,8 +319,10 @@ html<!DOCTYPE html>
                 <li>Historique de navigation, cookies</li>
                 <li>Informations bancaires</li>
                 <li>Identifiants publicitaires</li>
-                <li>Données de l'appareil</li>
+                <li>Données de l'appareil (modèle, version OS, etc.)</li>
                 <li>Photos/documents externes (hors fichiers que vous choisissez d'ajouter)</li>
+                <li>Données d'utilisation ou analytiques</li>
+                <li>Métadonnées de fichiers externes</li>
             </ul>
             <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #e74c3c;">
                 Aucune donnée ne quitte votre appareil.
@@ -301,27 +336,37 @@ html<!DOCTYPE html>
             <div class="subsection">
                 <h4>Calendrier</h4>
                 <ul>
-                    <li>Afficher/organiser vos événements</li>
-                    <li>Gérer les anniversaires</li>
-                    <li>Gérer les catégories</li>
+                    <li>Afficher/organiser vos événements avec vue mensuelle personnalisée</li>
+                    <li>Gérer les événements multi-jours avec barres visuelles continues</li>
+                    <li>Gérer les anniversaires avec calcul automatique de l'âge</li>
+                    <li>Gérer les catégories avec couleurs et icônes</li>
+                    <li>Gérer les répétitions (quotidien, hebdomadaire, mensuel, annuel, personnalisé)</li>
                     <li>Stocker les pièces jointes localement</li>
+                    <li>Afficher les événements par date dans l'agenda avec filtres de période</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h4>TodoList</h4>
                 <ul>
-                    <li>Organiser vos tâches</li>
-                    <li>Gérer les listes personnalisées</li>
+                    <li>Organiser vos tâches par listes personnalisées</li>
+                    <li>Gérer les listes avec couleurs et icônes personnalisables</li>
+                    <li>Réorganiser les tâches par glisser-déposer avec retour haptique</li>
+                    <li>Marquer les tâches comme complétées/non complétées</li>
+                    <li>Afficher les statistiques (total, à faire, complétées)</li>
                     <li>(Optionnel) Synchroniser les tâches avec le calendrier</li>
+                    <li>(Optionnel) Ajouter des listes entières au calendrier</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h4>Notifications</h4>
                 <ul>
-                    <li>Envoyer des rappels locaux</li>
+                    <li>Envoyer des rappels locaux (15min, 1h, 1 jour avant)</li>
+                    <li>Planifier automatiquement les notifications pour les événements</li>
+                    <li>Annuler automatiquement les notifications lors de suppression d'événements</li>
                     <li>Aucune connexion internet nécessaire</li>
+                    <li>Timezone configurée (Europe/Paris)</li>
                 </ul>
             </div>
 
@@ -329,24 +374,45 @@ html<!DOCTYPE html>
                 <h4>Sécurité</h4>
                 <ul>
                     <li>Protéger vos données (AES-256)</li>
-                    <li>Authentification biométrique / PIN / mot de passe</li>
-                    <li>Stockage sécurisé de la clé unique</li>
+                    <li>Authentification multi-méthodes (biométrie, PIN, mot de passe) indépendantes</li>
+                    <li>Stockage sécurisé de la clé de chiffrement unique via Flutter Secure Storage</li>
+                    <li>Assistant de configuration au premier lancement</li>
+                    <li>Navigation entre les méthodes d'authentification</li>
+                    <li>Détection et alerte pour mot de passe par défaut</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <h4>Personnalisation</h4>
                 <ul>
-                    <li>Thème</li>
-                    <li>Langue</li>
-                    <li>Affichage des sections</li>
+                    <li>Thème clair/sombre/automatique</li>
+                    <li>Langue français/anglais</li>
+                    <li>Affichage des sections (statistiques, dates)</li>
+                    <li>Filtres de période pour l'agenda</li>
+                    <li>Expansion/réduction de toutes les sections d'un coup</li>
+                    <li>Création et gestion de couleurs personnalisées</li>
                 </ul>
             </div>
 
             <div class="subsection">
-                <h4>Sauvegarde</h4>
+                <h4>Sauvegarde et restauration</h4>
                 <ul>
-                    <li>Export / import de sauvegardes chiffrées</li>
+                    <li>Export de sauvegardes complètes chiffrées (format .scbk)</li>
+                    <li>Import de sauvegardes avec déchiffrement automatique</li>
+                    <li>Protection par mot de passe personnalisé pour l'export</li>
+                    <li>Aperçu du contenu avant import (nombre d'événements, catégories, tâches, etc.)</li>
+                    <li>Corbeille pour restauration des éléments supprimés</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h4>Fonctions avancées</h4>
+                <ul>
+                    <li>Remise à demain des événements avec annulation possible</li>
+                    <li>Suppression sélective des occurrences ou de toutes les occurrences des événements répétitifs</li>
+                    <li>Saisie manuelle de dates avec formatage automatique (jj/mm/aaaa)</li>
+                    <li>Double méthode de sélection de date (saisie manuelle + calendrier visuel)</li>
+                    <li>Capitalisation automatique des textes saisis</li>
                 </ul>
             </div>
         </section>
@@ -360,32 +426,61 @@ html<!DOCTYPE html>
                     <p><strong>Les données suivantes sont chiffrées avec AES-256 :</strong></p>
                 </div>
                 <ul>
-                    <li>Événements</li>
+                    <li>Événements (simples, multi-jours, répétitifs)</li>
                     <li>Anniversaires</li>
-                    <li>Tâches</li>
-                    <li>Catégories</li>
+                    <li>Tâches TodoList</li>
+                    <li>Catégories (calendrier et TodoList)</li>
                     <li>Métadonnées des fichiers</li>
-                    <li>Mot de passe & PIN</li>
-                    <li>Corbeille</li>
+                    <li>Mot de passe</li>
+                    <li>Code PIN</li>
+                    <li>Corbeille (tous les éléments supprimés)</li>
+                    <li>Couleurs personnalisées</li>
+                    <li>Paramètres et préférences</li>
                 </ul>
             </div>
 
             <div class="subsection">
-                <h3>5.2 Authentification</h3>
+                <h3>5.2 Authentification multi-méthodes</h3>
+                <div class="info-box">
+                    <p><strong>Trois méthodes indépendantes configurables :</strong></p>
+                </div>
                 <ul>
-                    <li>Biométrie (empreinte digitale, reconnaissance faciale)</li>
-                    <li>Code PIN (4 à 6 chiffres)</li>
-                    <li>Mot de passe personnalisable</li>
+                    <li><strong>Biométrie :</strong> empreinte digitale ou reconnaissance faciale (gérée par le système)</li>
+                    <li><strong>Code PIN :</strong> 4 à 6 chiffres, personnalisable</li>
+                    <li><strong>Mot de passe :</strong> texte libre, minimum 4 caractères</li>
                 </ul>
-                <p><em>Tous les modes sont optionnels et indépendants.</em></p>
+                
+                <h4>Fonctionnalités de sécurité :</h4>
+                <ul>
+                    <li>Activation/désactivation indépendante de chaque méthode</li>
+                    <li>Navigation fluide entre les méthodes lors de l'authentification</li>
+                    <li>Assistant de configuration au premier lancement</li>
+                    <li>Modification individuelle de chaque méthode dans les paramètres</li>
+                    <li>Détection du mot de passe par défaut avec invitation à le changer</li>
+                    <li>Option "Ne plus me rappeler" pour l'alerte de mot de passe par défaut</li>
+                    <li>Confirmation biométrique pour les actions sensibles (désactivation de sécurité)</li>
+                </ul>
             </div>
 
             <div class="subsection">
                 <h3>5.3 Clé de chiffrement</h3>
                 <ul>
-                    <li>Générée automatiquement et localement</li>
-                    <li>Stockée de manière sécurisée sur votre appareil</li>
+                    <li>Générée automatiquement et localement lors de la première utilisation</li>
+                    <li>Stockée de manière sécurisée via Flutter Secure Storage</li>
                     <li>Ne quitte jamais votre appareil</li>
+                    <li>Utilisée pour toutes les opérations de chiffrement/déchiffrement</li>
+                    <li>Unique par installation</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>5.4 Sauvegardes chiffrées</h3>
+                <ul>
+                    <li><strong>Format propriétaire :</strong> fichiers .scbk (SafeCalen Backup)</li>
+                    <li><strong>Chiffrement AES-256 :</strong> avec mot de passe personnalisé choisi à l'export</li>
+                    <li><strong>Contenu complet :</strong> tous les événements, catégories, tâches, couleurs, corbeille</li>
+                    <li><strong>Métadonnées :</strong> version, date d'export pour compatibilité</li>
+                    <li><strong>Import sécurisé :</strong> vérification du mot de passe et aperçu avant restauration</li>
                 </ul>
             </div>
         </section>
@@ -401,24 +496,29 @@ html<!DOCTYPE html>
                 <ul>
                     <li>Une copie est enregistrée dans le répertoire privé de l'application</li>
                     <li>L'original reste dans votre galerie</li>
+                    <li>Permission caméra demandée uniquement au moment de l'utilisation</li>
                 </ul>
 
                 <h4>Photos (galerie)</h4>
                 <ul>
-                    <li>Une copie est enregistrée localement</li>
+                    <li>Une copie est enregistrée localement dans l'application</li>
                     <li>La photo originale n'est jamais modifiée</li>
+                    <li>Permission galerie demandée uniquement au moment de l'utilisation</li>
                 </ul>
 
                 <h4>Documents</h4>
                 <ul>
                     <li>Une copie est enregistrée dans le répertoire privé de l'application</li>
+                    <li>Formats supportés : PDF, DOC, DOCX, TXT, XLSX, XLS</li>
                     <li>Les fichiers originaux restent intacts dans vos dossiers</li>
+                    <li>Permission stockage demandée uniquement au moment de l'utilisation</li>
                 </ul>
 
                 <h4>Liens</h4>
                 <ul>
-                    <li>Stockés sous forme de texte</li>
+                    <li>Stockés sous forme de texte chiffré</li>
                     <li>Aucun téléchargement automatique</li>
+                    <li>Ouverture dans le navigateur externe lors du clic</li>
                 </ul>
             </div>
 
@@ -428,43 +528,55 @@ html<!DOCTYPE html>
                 <h4>Métadonnées</h4>
                 <p>Noms, types, chemins → <strong>chiffrés AES-256</strong> dans la base de données.</p>
 
-                <h4>Fichiers</h4>
+                <h4>Fichiers physiques</h4>
                 <ul>
-                    <li>Stockés dans le répertoire privé de l'application</li>
-                    <li>Protégés par la sandbox Android/iOS</li>
-                    <li>Inaccessibles aux autres applications</li>
+                    <li>Stockés dans le répertoire privé de l'application (sandbox)</li>
+                    <li>Protégés par l'isolation du système d'exploitation (Android/iOS)</li>
+                    <li>Inaccessibles aux autres applications sans permissions root/jailbreak</li>
+                    <li>Supprimés automatiquement lors de la désinstallation de l'application</li>
                 </ul>
 
-                <h4>Transparence</h4>
+                <h4>Transparence importante</h4>
                 <div class="warning">
-                    <p><strong>⚠️ Les fichiers eux-mêmes (photos, documents) ne sont pas chiffrés.</strong></p>
+                    <p><strong>⚠️ Les fichiers eux-mêmes (photos, documents) ne sont PAS chiffrés individuellement.</strong></p>
                     <p>Ils restent cependant protégés par :</p>
                     <ul>
-                        <li>L'isolation du système d'exploitation</li>
-                        <li>L'accès restreint au stockage interne</li>
-                        <li>Le verrouillage de l'appareil</li>
+                        <li>L'isolation du système d'exploitation (sandbox Android/iOS)</li>
+                        <li>L'accès restreint au stockage interne de l'application</li>
+                        <li>Le verrouillage de l'appareil (PIN/empreinte/visage)</li>
+                        <li>Les permissions d'accès du système d'exploitation</li>
                     </ul>
                 </div>
+                
                 <div class="danger">
-                    <p><strong>⚠️ Sur un appareil rooté ou compromis, ils pourraient être lisibles.</strong></p>
+                    <p><strong>⚠️ Sur un appareil rooté, jailbreaké ou compromis, ces fichiers pourraient théoriquement être accessibles.</strong></p>
+                    <p>Cette limitation est due aux contraintes techniques des systèmes d'exploitation mobiles et au compromis entre sécurité et performances.</p>
                 </div>
             </div>
 
             <div class="subsection">
-                <h3>6.3 Suppression</h3>
-                <p>Supprimer une pièce jointe supprime uniquement la copie locale.</p>
-                <p>Vos fichiers originaux dans la galerie/dossiers restent intacts.</p>
+                <h3>6.3 Gestion des pièces jointes</h3>
+                <ul>
+                    <li><strong>Ajout :</strong> via menu contextuel des événements (photos, documents, liens)</li>
+                    <li><strong>Visualisation :</strong> ouverture des photos en plein écran avec zoom</li>
+                    <li><strong>Partage :</strong> possibilité de partager les documents via le système</li>
+                    <li><strong>Suppression :</strong> supprime uniquement la copie locale, jamais l'original</li>
+                    <li><strong>Indicateurs :</strong> icône de trombone sur les événements avec pièces jointes</li>
+                </ul>
             </div>
 
             <div class="subsection">
-                <h3>6.4 Recommandations</h3>
+                <h3>6.4 Recommandations de sécurité</h3>
                 <div class="info-box">
                     <p><strong>Pour une sécurité optimale :</strong></p>
                     <ul>
                         <li>Activez le verrouillage de votre appareil (PIN, empreinte, visage)</li>
+                        <li>Utilisez plusieurs méthodes de sécurité dans SafeCalen (biométrie + PIN/mot de passe)</li>
                         <li>Ne partagez pas votre appareil avec des personnes non fiables</li>
                         <li>Utilisez les sauvegardes chiffrées régulièrement</li>
-                        <li>Évitez les appareils rootés/jailbreakés</li>
+                        <li>Évitez les appareils rootés/jailbreakés pour des données sensibles</li>
+                        <li>Changez le mot de passe par défaut dès le premier lancement</li>
+                        <li>Gardez votre système d'exploitation à jour</li>
                     </ul>
                 </div>
             </div>
@@ -472,138 +584,414 @@ html<!DOCTYPE html>
 
         <section class="section">
             <h2>7. Notifications et rappels</h2>
-            <ul>
-                <li>Notifications locales uniquement (générées sur votre appareil)</li>
-                <li>Permissions demandées pour envoyer des rappels</li>
-                <li>Aucune donnée envoyée vers l'extérieur</li>
-                <li>Aucun serveur nécessaire</li>
-            </ul>
+            
+            <div class="subsection">
+                <h3>7.1 Fonctionnement</h3>
+                <ul>
+                    <li><strong>Notifications locales uniquement :</strong> générées sur votre appareil via Flutter Local Notifications</li>
+                    <li><strong>Aucun serveur :</strong> aucune donnée envoyée vers l'extérieur</li>
+                    <li><strong>Rappels configurables :</strong> 15 minutes, 1 heure, 1 jour avant l'événement</li>
+                    <li><strong>Planification automatique :</strong> lors de la création d'événements avec rappels</li>
+                    <li><strong>Annulation automatique :</strong> lors de la modification ou suppression d'événements</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>7.2 Configuration</h3>
+                <ul>
+                    <li><strong>Timezone :</strong> Europe/Paris configurée par défaut</li>
+                    <li><strong>Permissions :</strong> demandées uniquement lors de la première utilisation</li>
+                    <li><strong>Activation/désactivation :</strong> dans les paramètres de l'application</li>
+                    <li><strong>Canal de notification :</strong> "calendar_channel" pour Android</li>
+                    <li><strong>Priorité :</strong> haute pour assurer la livraison</li>
+                </ul>
+            </div>
         </section>
 
         <section class="section">
             <h2>8. Données des enfants</h2>
             <div class="highlight">
-                <p>SafeCalen ne collecte aucune donnée personnelle identifiable.</p>
-                <p>Aucune publicité, aucun achat intégré.</p>
-                <p>Application adaptée à tous les âges.</p>
+                <p><strong>SafeCalen ne collecte aucune donnée personnelle identifiable.</strong></p>
+                <p>Aucune publicité, aucun achat intégré, aucun contenu inapproprié.</p>
+                <p>Application adaptée à tous les âges et conforme aux réglementations de protection de l'enfance (COPPA, etc.).</p>
+                <p>Fonctionnement 100% local sans connexion internet requise pour les fonctions principales.</p>
             </div>
         </section>
 
         <section class="section">
             <h2>9. Vos droits</h2>
             <p>Vous pouvez à tout moment :</p>
-            <ul>
-                <li>Consulter toutes vos données dans l'application</li>
-                <li>Exporter vos données (sauvegarde chiffrée)</li>
-                <li>Supprimer vos données (partiellement ou totalement)</li>
-                <li>Vider la corbeille</li>
-                <li>Réinitialiser complètement l'application</li>
-                <li>Changer votre mot de passe / PIN / paramètres biométriques</li>
-                <li>Nous contacter pour toute question</li>
-            </ul>
-            <p><strong>Important :</strong> La désinstallation supprime automatiquement toutes les données locales.</p>
+            
+            <div class="subsection">
+                <h3>9.1 Accès aux données</h3>
+                <ul>
+                    <li>Consulter toutes vos données directement dans l'application</li>
+                    <li>Visualiser les statistiques d'utilisation (TodoList)</li>
+                    <li>Accéder à l'historique via l'agenda avec filtres de période</li>
+                    <li>Voir les éléments dans la corbeille avant suppression définitive</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.2 Export et sauvegarde</h3>
+                <ul>
+                    <li>Exporter toutes vos données dans un fichier chiffré (.scbk)</li>
+                    <li>Choisir un mot de passe personnalisé pour protéger l'export</li>
+                    <li>Partager le fichier via le système (email, cloud, etc.)</li>
+                    <li>Conserver plusieurs sauvegardes avec horodatage automatique</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.3 Suppression des données</h3>
+                <ul>
+                    <li>Supprimer des événements, tâches ou catégories individuellement</li>
+                    <li>Supprimer uniquement une occurrence ou toutes les occurrences d'un événement répétitif</li>
+                    <li>Supprimer toutes les tâches complétées en une fois</li>
+                    <li>Vider la corbeille (suppression définitive)</li>
+                    <li>Réinitialiser complètement l'application (supprime tout)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.4 Restauration</h3>
+                <ul>
+                    <li>Restaurer des éléments depuis la corbeille</li>
+                    <li>Importer une sauvegarde complète chiffrée</li>
+                    <li>Aperçu du contenu avant import</li>
+                    <li>Annuler la remise à demain d'un événement</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.5 Modification des paramètres de sécurité</h3>
+                <ul>
+                    <li>Changer votre mot de passe à tout moment</li>
+                    <li>Créer ou modifier votre code PIN</li>
+                    <li>Activer/désactiver l'authentification biométrique</li>
+                    <li>Configurer indépendamment chaque méthode de sécurité</li>
+                    <li>Naviguer entre les méthodes lors de l'authentification</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.6 Personnalisation</h3>
+                <ul>
+                    <li>Changer le thème (clair/sombre/automatique)</li>
+                    <li>Changer la langue (français/anglais)</li>
+                    <li>Masquer/afficher les statistiques TodoList</li>
+                    <li>Masquer/afficher les dates de création des tâches</li>
+                    <li>Configurer le filtre de période de l'agenda</li>
+                    <li>Créer et gérer des couleurs personnalisées</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>9.7 Contact</h3>
+                <ul>
+                    <li>Nous contacter pour toute question via duc.inde@gmail.com</li>
+                    <li>Demander des clarifications sur la politique de confidentialité</li>
+                    <li>Signaler un problème de sécurité</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <p><strong>Important :</strong> La désinstallation de l'application supprime automatiquement toutes les données locales de manière irréversible.</p>
+                <p><strong>Recommandation :</strong> Créez une sauvegarde chiffrée avant de désinstaller l'application si vous souhaitez conserver vos données.</p>
+            </div>
         </section>
 
         <section class="section">
             <h2>10. Permissions Android / iOS</h2>
 
             <div class="subsection">
-                <h3>Permissions obligatoires</h3>
+                <h3>10.1 Permissions obligatoires</h3>
                 <ul>
-                    <li><strong>Stockage</strong> : Pour sauvegarder vos données localement</li>
-                    <li><strong>Notifications</strong> : Pour envoyer des rappels d'événements</li>
+                    <li><strong>Stockage :</strong> Pour sauvegarder vos données localement dans l'espace privé de l'application</li>
+                    <li><strong>Notifications :</strong> Pour envoyer des rappels d'événements (désactivable dans les paramètres)</li>
                 </ul>
             </div>
 
             <div class="subsection">
-                <h3>Permissions optionnelles</h3>
+                <h3>10.2 Permissions optionnelles</h3>
+                <p><em>Demandées uniquement au moment où une fonctionnalité en a besoin :</em></p>
                 <ul>
-                    <li><strong>Appareil photo</strong> : Si vous souhaitez prendre une photo pour un événement</li>
-                    <li><strong>Galerie</strong> : Si vous souhaitez ajouter une photo existante</li>
-                    <li><strong>Documents</strong> : Si vous souhaitez attacher un document</li>
-                    <li><strong>Biométrie</strong> : Si vous activez l'authentification biométrique</li>
+                    <li><strong>Appareil photo :</strong> Si vous souhaitez prendre une photo pour un événement</li>
+                    <li><strong>Galerie/Photos :</strong> Si vous souhaitez ajouter une photo existante</li>
+                    <li><strong>Documents/Fichiers :</strong> Si vous souhaitez attacher un document ou importer une sauvegarde</li>
+                    <li><strong>Biométrie (empreinte/visage) :</strong> Si vous activez l'authentification biométrique</li>
                 </ul>
             </div>
 
-            <p><em>Les permissions ne sont demandées qu'au moment où une fonctionnalité en a besoin.</em></p>
+            <div class="subsection">
+                <h3>10.3 Utilisation des permissions</h3>
+                <div class="info-box">
+                    <p><strong>Engagement de transparence :</strong></p>
+                    <ul>
+                        <li>Aucune permission n'est demandée sans raison valable</li>
+                        <li>Les permissions sont demandées au moment de l'utilisation, pas à l'installation</li>
+                        <li>Vous pouvez refuser une permission et utiliser les autres fonctionnalités</li>
+                        <li>Vous pouvez révoquer les permissions à tout moment dans les paramètres système</li>
+                        <li>Les données des permissions ne sont jamais transmises hors de l'appareil</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section class="section">
             <h2>11. Technologies utilisées</h2>
-            <div class="feature-list">
-                <div class="feature-item">Flutter</div>
-                <div class="feature-item">Dart</div>
-                <div class="feature-item">Flutter Secure Storage</div>
-                <div class="feature-item">Encrypt (AES-256)</div>
-                <div class="feature-item">Local Auth</div>
-                <div class="feature-item">Flutter Local Notifications</div>
+            
+            <div class="subsection">
+                <h3>11.1 Framework et langage</h3>
+                <div class="feature-list">
+                    <div class="feature-item">Flutter (framework multiplateforme)</div>
+                    <div class="feature-item">Dart (langage de programmation)</div>
+                </div>
             </div>
-            <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
-                Aucun service externe, aucun tracker, aucun cloud.
-            </p>
+
+            <div class="subsection">
+                <h3>11.2 Bibliothèques de sécurité</h3>
+                <ul>
+                    <li><strong>flutter_secure_storage :</strong> Stockage sécurisé des clés de chiffrement</li>
+                    <li><strong>encrypt :</strong> Chiffrement AES-256 des données sensibles</li>
+                    <li><strong>local_auth :</strong> Authentification biométrique (empreinte/visage)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>11.3 Bibliothèques fonctionnelles</h3>
+                <ul>
+                    <li><strong>flutter_local_notifications :</strong> Notifications locales pour rappels</li>
+                    <li><strong>shared_preferences :</strong> Préférences et paramètres utilisateur</li>
+                    <li><strong>file_picker :</strong> Sélection de documents</li>
+                    <li><strong>image_picker :</strong> Capture et sélection de photos</li>
+                    <li><strong>path_provider :</strong> Accès aux répertoires système</li>
+                    <li><strong>url_launcher :</strong> Ouverture de liens externes</li>
+                    <li><strong>share_plus :</strong> Partage de fichiers via le système</li>
+                    <li><strong>permission_handler :</strong> Gestion des permissions système</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>11.4 Bibliothèques d'interface</h3>
+                <ul>
+                    <li><strong>intl :</strong> Internationalisation et formatage de dates</li>
+                    <li><strong>fl_chart :</strong> Graphiques et statistiques</li>
+                    <li><strong>flutter_colorpicker :</strong> Sélecteur de couleurs avancé</li>
+                    <li><strong>flutter_localizations :</strong> Support multilingue</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
+                    Aucun service externe, aucun tracker, aucun cloud, aucune analytique.
+                </p>
+                <p style="text-align: center; margin-top: 10px;">
+                    Toutes les bibliothèques utilisées sont open-source et fonctionnent localement sur votre appareil.
+                </p>
+            </div>
         </section>
 
         <section class="section">
             <h2>12. Monétisation</h2>
             <div class="info-box">
                 <ul>
-                    <li><strong>Achat unique :</strong> 3,50 €</li>
+                    <li><strong>Modèle économique :</strong> Achat unique</li>
+                    <li><strong>Prix :</strong> 3,50 € (peut varier selon les pays)</li>
                     <li>✓ Aucune publicité</li>
                     <li>✓ Aucun abonnement</li>
                     <li>✓ Aucun achat intégré supplémentaire</li>
                     <li>✓ Aucune monétisation de vos données</li>
+                    <li>✓ Aucun partenariat commercial</li>
+                    <li>✓ Aucune vente de données à des tiers</li>
                 </ul>
-                <p style="margin-top: 15px;"><strong>Toutes les fonctionnalités incluses dès l'achat.</strong></p>
+                <p style="margin-top: 15px;"><strong>Toutes les fonctionnalités sont incluses dès l'achat, pour toujours.</strong></p>
+                <p style="margin-top: 10px;">Les mises à jour futures seront gratuites pour tous les utilisateurs ayant acheté l'application.</p>
             </div>
         </section>
 
         <section class="section">
-            <h2>13. Modifications</h2>
-            <p>Cette politique peut être mise à jour en cas d'évolution de l'application.</p>
-            <p>En cas de changement important, nous vous en informerons via une mise à jour.</p>
-            <ul>
-                <li><strong>Version actuelle :</strong> 1.0.0</li>
-                <li><strong>Dernière modification :</strong> 23 novembre 2025</li>
-            </ul>
+            <h2>13. Modifications de la politique</h2>
+            
+            <div class="subsection">
+                <h3>13.1 Versionnage</h3>
+                <ul>
+                    <li><strong>Version actuelle :</strong> 2.0 (9 décembre 2024)</li>
+                    <li><strong>Version précédente :</strong> 1.0 (23 novembre 2024)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>13.2 Changements principaux (v1.0 → v2.0)</h3>
+                <ul>
+                    <li>Ajout de la gestion des événements multi-jours</li>
+                    <li>Ajout des répétitions personnalisées (tous les X jours)</li>
+                    <li>Ajout du système de cache unifié (DataCacheManager)</li>
+                    <li>Amélioration de la TodoList (glisser-déposer, statistiques)</li>
+                    <li>Ajout du système de corbeille avec restauration</li>
+                    <li>Ajout des sauvegardes chiffrées (format .scbk)</li>
+                    <li>Ajout de la personnalisation des couleurs</li>
+                    <li>Ajout du support bilingue français/anglais</li>
+                    <li>Ajout de l'authentification multi-méthodes indépendantes</li>
+                    <li>Ajout de la fonctionnalité "Remise à demain"</li>
+                    <li>Ajout de la synchronisation TodoList vers Calendrier</li>
+                    <li>Amélioration de la sécurité (détection mot de passe par défaut)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>13.3 Communication des changements</h3>
+                <p>Cette politique peut être mise à jour en cas d'évolution de l'application.</p>
+                <p>En cas de changement important concernant vos données ou votre vie privée :</p>
+                <ul>
+                    <li>Nous vous en informerons via une mise à jour de l'application</li>
+                    <li>La version et la date seront clairement indiquées en en-tête</li>
+                    <li>Un résumé des changements sera fourni</li>
+                    <li>Vous pourrez consulter l'historique des versions</li>
+                </ul>
+                <p><strong>Important :</strong> Nous ne modifierons jamais nos engagements fondamentaux de confidentialité (pas de collecte de données, stockage 100% local, chiffrement).</p>
+            </div>
         </section>
 
         <section class="section">
             <h2>14. Conformité RGPD</h2>
-            <p>SafeCalen respecte les principes du RGPD (Règlement Général sur la Protection des Données) :</p>
-            <ul>
-                <li><strong>Transparence</strong> : Cette politique vous informe clairement de nos pratiques</li>
-                <li><strong>Minimisation</strong> : Nous collectons uniquement les données nécessaires</li>
-                <li><strong>Sécurité renforcée</strong> : Chiffrement AES-256 de toutes vos données</li>
-                <li><strong>Contrôle utilisateur</strong> : Vous gardez le contrôle total de vos données</li>
-                <li><strong>Droit à l'effacement</strong> : Suppression facile et complète possible à tout moment</li>
-            </ul>
-            <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
-                Toutes les données restent exclusivement sur votre appareil.
-            </p>
+            <p>SafeCalen respecte et dépasse les exigences du RGPD (Règlement Général sur la Protection des Données) :</p>
+            
+            <div class="subsection">
+                <h3>14.1 Principes RGPD appliqués</h3>
+                <ul>
+                    <li><strong>Transparence :</strong> Cette politique vous informe clairement de toutes nos pratiques</li>
+                    <li><strong>Minimisation des données :</strong> Nous collectons uniquement les données strictement nécessaires au fonctionnement</li>
+                    <li><strong>Limitation de la finalité :</strong> Les données servent uniquement aux fonctionnalités décrites</li>
+                    <li><strong>Exactitude :</strong> Vous contrôlez et modifiez vos données à tout moment</li>
+                    <li><strong>Limitation de la conservation :</strong> Les données sont conservées tant que vous utilisez l'application</li>
+                    <li><strong>Intégrité et confidentialité :</strong> Chiffrement AES-256 et stockage sécurisé</li>
+                    <li><strong>Responsabilité :</strong> Nous documentons toutes nos pratiques de protection des données</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>14.2 Droits RGPD garantis</h3>
+                <ul>
+                    <li><strong>Droit d'accès :</strong> Vous voyez toutes vos données dans l'application</li>
+                    <li><strong>Droit de rectification :</strong> Vous modifiez vos données à tout moment</li>
+                    <li><strong>Droit à l'effacement :</strong> Vous supprimez vos données partiellement ou totalement</li>
+                    <li><strong>Droit à la portabilité :</strong> Vous exportez vos données dans un format structuré (JSON chiffré)</li>
+                    <li><strong>Droit d'opposition :</strong> Architecture locale sans traitement imposé</li>
+                    <li><strong>Droit à la limitation du traitement :</strong> Vous contrôlez toutes les fonctionnalités</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>14.3 Architecture "Privacy by Design"</h3>
+                <div class="highlight">
+                    <p><strong>SafeCalen est conçu dès l'origine pour garantir votre vie privée :</strong></p>
+                    <ul>
+                        <li>Aucune connexion serveur (pas de backend)</li>
+                        <li>Aucune collecte de données (pas de base de données externe)</li>
+                        <li>Stockage 100% local et chiffré</li>
+                        <li>Vous êtes le seul responsable du traitement de vos données</li>
+                        <li>Aucun sous-traitant (pas de services tiers)</li>
+                        <li>Aucun transfert international de données</li>
+                        <li>Aucun profilage ou décision automatisée</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>14.4 Absence d'obligations RGPD spécifiques</h3>
+                <p>Du fait de notre architecture 100% locale, certaines obligations RGPD ne s'appliquent pas :</p>
+                <ul>
+                    <li><strong>Pas de DPO (Délégué à la Protection des Données) :</strong> Aucun traitement à grande échelle</li>
+                    <li><strong>Pas d'AIPD (Analyse d'Impact) :</strong> Aucun risque pour les droits et libertés</li>
+                    <li><strong>Pas de registre des traitements :</strong> Aucun traitement de données personnelles</li>
+                    <li><strong>Pas de notification de violation :</strong> Aucune base de données à pirater</li>
+                    <li><strong>Pas de consentement requis :</strong> Vous contrôlez directement vos données</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #27ae60;">
+                    En utilisant SafeCalen, vous bénéficiez du plus haut niveau de protection de la vie privée possible.
+                </p>
+                <p style="text-align: center; margin-top: 10px;">
+                    Vos données ne quittent jamais votre appareil et restent sous votre contrôle exclusif.
+                </p>
+            </div>
         </section>
 
         <section class="section">
             <h2>15. Contact</h2>
             <div class="contact-info">
-                <p>Pour toute question concernant cette politique de confidentialité ou l'application SafeCalen :</p>
+                <p><strong>Pour toute question concernant cette politique de confidentialité ou l'application SafeCalen :</strong></p>
                 <ul>
                     <li><strong>Email :</strong> <a href="mailto:duc.inde@gmail.com">duc.inde@gmail.com</a></li>
                     <li><strong>Développeur :</strong> Duc.inde</li>
+                    <li><strong>Réponse :</strong> Nous nous engageons à répondre dans les meilleurs délais (généralement sous 48h)</li>
                 </ul>
-                <p style="margin-top: 15px;">Nous nous engageons à répondre à vos questions dans les meilleurs délais.</p>
+                
+                <p style="margin-top: 15px;"><strong>Types de demandes acceptées :</strong></p>
+                <ul>
+                    <li>Questions sur la politique de confidentialité</li>
+                    <li>Clarifications sur l'utilisation des données</li>
+                    <li>Signalement de problèmes de sécurité</li>
+                    <li>Suggestions d'amélioration</li>
+                    <li>Support technique</li>
+                </ul>
             </div>
         </section>
 
         <section class="section">
-            <h2>16. Transparence du code</h2>
-            <p>SafeCalen est développé avec une attention particulière à la sécurité et à la confidentialité :</p>
-            <ul>
-                <li>Chiffrement AES-256 de toutes les données sensibles</li>
-                <li>Stockage sécurisé des clés de chiffrement</li>
-                <li>Aucune connexion réseau pour les fonctionnalités principales</li>
-                <li>Audits de sécurité réguliers</li>
-                <li>Mises à jour correctives rapides en cas de vulnérabilité détectée</li>
-            </ul>
+            <h2>16. Transparence du code et sécurité</h2>
+            
+            <div class="subsection">
+                <h3>16.1 Pratiques de développement</h3>
+                <p>SafeCalen est développé avec une attention particulière à la sécurité et à la confidentialité :</p>
+                <ul>
+                    <li>Chiffrement AES-256 pour toutes les données sensibles</li>
+                    <li>Stockage sécurisé des clés de chiffrement via Flutter Secure Storage</li>
+                    <li>Aucune connexion réseau pour les fonctionnalités principales</li>
+                    <li>Validation et sanitisation de toutes les entrées utilisateur</li>
+                    <li>Gestion sécurisée de la mémoire (pas de fuite de données)</li>
+                    <li>Architecture modulaire avec séparation des responsabilités</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>16.2 Mises à jour et correctifs</h3>
+                <ul>
+                    <li>Mises à jour régulières pour corrections de bugs et améliorations</li>
+                    <li>Correctifs de sécurité prioritaires en cas de vulnérabilité détectée</li>
+                    <li>Compatibilité maintenue avec les dernières versions d'Android et iOS</li>
+                    <li>Tests approfondis avant chaque publication</li>
+                    <li>Versionnage sémantique pour suivi des changements</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>16.3 Audits et vérification</h3>
+                <ul>
+                    <li>Revue de code régulière pour détecter les problèmes de sécurité</li>
+                    <li>Tests de chiffrement/déchiffrement pour vérifier l'intégrité</li>
+                    <li>Vérification de l'absence de fuites de données</li>
+                    <li>Tests de permissions (vérification qu'aucune permission excessive n'est demandée)</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>16.4 Engagement de transparence</h3>
+                <div class="info-box">
+                    <p><strong>Nous nous engageons à :</strong></p>
+                    <ul>
+                        <li>Maintenir cette politique de confidentialité à jour</li>
+                        <li>Documenter tous les changements significatifs</li>
+                        <li>Répondre rapidement aux questions de sécurité</li>
+                        <li>Corriger les vulnérabilités dans les plus brefs délais</li>
+                        <li>Ne jamais ajouter de télémétrie ou de tracking sans votre consentement explicite</li>
+                        <li>Conserver notre engagement de confidentialité totale</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <footer>
@@ -615,7 +1003,11 @@ html<!DOCTYPE html>
                     Votre vie privée reste totalement sous votre contrôle.
                 </p>
             </div>
-            <p style="margin-top: 30px;">© 2025 SafeCalen - Duc.inde</p>
+            
+            <p style="margin-top: 30px;">© 2024-2025 SafeCalen - Duc.inde</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                Politique de confidentialité version 2.0
+            </p>
         </footer>
     </div>
 </body>
