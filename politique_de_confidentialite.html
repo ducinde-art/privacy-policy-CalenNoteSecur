@@ -190,13 +190,13 @@
         <header>
             <h1>Politique de confidentialité</h1>
             <h2 style="border: none; margin-top: 10px; font-size: 28px; color: #3498db;">SafeCalen</h2>
-            <div class="meta">
-                <p><strong>Version :</strong> 2.0</p>
-                <p><strong>Dernière mise à jour :</strong> 9 décembre 2024</p>
-                <p><strong>Version précédente :</strong> 1.0 (23 novembre 2024)</p>
-                <p><strong>Développeur :</strong> Duc.inde</p>
-                <p><strong>Contact :</strong> <a href="mailto:duc.inde@gmail.com">duc.inde@gmail.com</a></p>
-            </div>
+        <div class="meta">
+            <p><strong>Version :</strong> 2.1</p>
+            <p><strong>Dernière mise à jour :</strong> 15 janvier 2025</p>
+            <p><strong>Version précédente :</strong> 2.0 (9 décembre 2024)</p>
+            <p><strong>Développeur :</strong> Duc.inde</p>
+            <p><strong>Contact :</strong> <a href="mailto:duc.inde@gmail.com">duc.inde@gmail.com</a></p>
+        </div>
         </header>
 
         <section class="section">
@@ -233,10 +233,12 @@
                     <li><strong>Événements :</strong> titre, description, date, heure, catégorie</li>
                     <li><strong>Événements multi-jours :</strong> date de début, date de fin</li>
                     <li><strong>Répétitions :</strong> quotidienne, hebdomadaire, mensuelle, dernier jour du mois, annuelle, personnalisée (tous les X jours)</li>
+                    <li><strong>Suppression sélective :</strong> cette occurrence, toutes les occurrences, occurrences futures, occurrences passées</li>
                     <li><strong>Événements journée entière :</strong> sans heure spécifique</li>
                     <li><strong>Anniversaires :</strong> nom, date de naissance, année de naissance (pour calcul automatique de l'âge), notes, couleur personnalisée</li>
                     <li><strong>Catégories :</strong> nom, couleur personnalisable, icône</li>
                     <li><strong>Rappels :</strong> 15 minutes, 1 heure, 1 jour avant l'événement</li>
+                    <li><strong>Planification des notifications :</strong> durée configurable (jours, semaines, mois) avec aperçu du nombre de notifications</li>
                     <li><strong>Pièces jointes :</strong> photos, documents, liens (copie locale uniquement)</li>
                 </ul>
             </div>
@@ -408,11 +410,20 @@
             <div class="subsection">
                 <h4>Fonctions avancées</h4>
                 <ul>
-                    <li>Remise à demain des événements avec annulation possible</li>
-                    <li>Suppression sélective des occurrences ou de toutes les occurrences des événements répétitifs</li>
+                    <li>Remise à demain des événements (cette occurrence ou toutes les occurrences)</li>
+                    <li>Suppression sélective des événements répétitifs :
+                        <ul style="margin-left: 20px; margin-top: 8px;">
+                            <li>Cette occurrence uniquement</li>
+                            <li>Toutes les occurrences</li>
+                            <li>Cette occurrence et les suivantes (futures)</li>
+                            <li>Cette occurrence et les précédentes (passées)</li>
+                        </ul>
+                    </li>
+                    <li>Planification intelligente des notifications avec aperçu du nombre selon le type de répétition</li>
                     <li>Saisie manuelle de dates avec formatage automatique (jj/mm/aaaa)</li>
                     <li>Double méthode de sélection de date (saisie manuelle + calendrier visuel)</li>
                     <li>Capitalisation automatique des textes saisis</li>
+                    <li>Annulation des notifications lors de la réinitialisation des données</li>
                 </ul>
             </div>
         </section>
@@ -592,7 +603,9 @@
                     <li><strong>Aucun serveur :</strong> aucune donnée envoyée vers l'extérieur</li>
                     <li><strong>Rappels configurables :</strong> 15 minutes, 1 heure, 1 jour avant l'événement</li>
                     <li><strong>Planification automatique :</strong> lors de la création d'événements avec rappels</li>
-                    <li><strong>Annulation automatique :</strong> lors de la modification ou suppression d'événements</li>
+                    <li><strong>Durée personnalisable :</strong> choix de la durée de planification (jours, semaines, mois, jusqu'à 1 an)</li>
+                    <li><strong>Aperçu intelligent :</strong> affichage du nombre de notifications selon le type de répétition</li>
+                    <li><strong>Annulation automatique :</strong> lors de la modification, suppression d'événements ou réinitialisation des données</li>
                 </ul>
             </div>
 
@@ -645,12 +658,19 @@
             <div class="subsection">
                 <h3>9.3 Suppression des données</h3>
                 <ul>
-                    <li>Supprimer des événements, tâches ou catégories individuellement</li>
-                    <li>Supprimer uniquement une occurrence ou toutes les occurrences d'un événement répétitif</li>
-                    <li>Supprimer toutes les tâches complétées en une fois</li>
-                    <li>Vider la corbeille (suppression définitive)</li>
-                    <li>Réinitialiser complètement l'application (supprime tout)</li>
-                </ul>
+                        <li>Supprimer des événements, tâches ou catégories individuellement</li>
+                        <li>Supprimer les événements répétitifs de manière sélective :
+                            <ul style="margin-left: 20px; margin-top: 8px;">
+                                <li>Uniquement cette occurrence</li>
+                                <li>Toutes les occurrences du groupe</li>
+                                <li>Cette occurrence et toutes les futures</li>
+                                <li>Cette occurrence et toutes les passées</li>
+                            </ul>
+                        </li>
+                        <li>Supprimer toutes les tâches complétées en une fois</li>
+                        <li>Vider la corbeille (suppression définitive)</li>
+                        <li>Réinitialiser complètement l'application (supprime tout, y compris les notifications planifiées)</li>
+                    </ul>
             </div>
 
             <div class="subsection">
@@ -816,26 +836,20 @@
             <div class="subsection">
                 <h3>13.1 Versionnage</h3>
                 <ul>
-                    <li><strong>Version actuelle :</strong> 2.0 (9 décembre 2024)</li>
-                    <li><strong>Version précédente :</strong> 1.0 (23 novembre 2024)</li>
+                    <li><strong>Version actuelle :</strong> 2.1 (15 janvier 2025)</li>
+                    <li><strong>Version précédente :</strong> 2.0 (9 décembre 2024)</li>
                 </ul>
             </div>
-
+            
             <div class="subsection">
-                <h3>13.2 Changements principaux (v1.0 → v2.0)</h3>
+                <h3>13.2 Changements principaux (v2.0 → v2.1)</h3>
                 <ul>
-                    <li>Ajout de la gestion des événements multi-jours</li>
-                    <li>Ajout des répétitions personnalisées (tous les X jours)</li>
-                    <li>Ajout du système de cache unifié (DataCacheManager)</li>
-                    <li>Amélioration de la TodoList (glisser-déposer, statistiques)</li>
-                    <li>Ajout du système de corbeille avec restauration</li>
-                    <li>Ajout des sauvegardes chiffrées (format .scbk)</li>
-                    <li>Ajout de la personnalisation des couleurs</li>
-                    <li>Ajout du support bilingue français/anglais</li>
-                    <li>Ajout de l'authentification multi-méthodes indépendantes</li>
-                    <li>Ajout de la fonctionnalité "Remise à demain"</li>
-                    <li>Ajout de la synchronisation TodoList vers Calendrier</li>
-                    <li>Amélioration de la sécurité (détection mot de passe par défaut)</li>
+                    <li>Ajout de la suppression sélective avancée des événements répétitifs (futures/passées)</li>
+                    <li>Amélioration de la planification des notifications avec aperçu intelligent</li>
+                    <li>Affichage du nombre de notifications selon le type de répétition</li>
+                    <li>Ajout du choix "cette occurrence" ou "toutes les occurrences" pour remise à demain</li>
+                    <li>Annulation automatique des notifications lors de la réinitialisation des données</li>
+                    <li>Corrections de bugs et améliorations de stabilité</li>
                 </ul>
             </div>
 
@@ -853,6 +867,15 @@
             </div>
         </section>
 
+        <div class="subsection">
+            <h3>13.4 Historique des versions</h3>
+            <ul>
+                <li><strong>v2.1 (15 janvier 2025) :</strong> Suppression sélective avancée, planification notifications améliorée</li>
+                <li><strong>v2.0 (9 décembre 2024) :</strong> Multi-jours, corbeille, sauvegardes chiffrées, TodoList améliorée</li>
+                <li><strong>v1.0 (23 novembre 2024) :</strong> Version initiale</li>
+            </ul>
+        </div>
+        
         <section class="section">
             <h2>14. Conformité RGPD</h2>
             <p>SafeCalen respecte et dépasse les exigences du RGPD (Règlement Général sur la Protection des Données) :</p>
@@ -1006,7 +1029,7 @@
             
             <p style="margin-top: 30px;">© 2024-2025 SafeCalen - Duc.inde</p>
             <p style="margin-top: 10px; font-size: 12px;">
-                Politique de confidentialité version 2.0
+                Politique de confidentialité version 2.1
             </p>
         </footer>
     </div>
